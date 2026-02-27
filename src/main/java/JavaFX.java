@@ -1,5 +1,6 @@
 import javafx.application.Application;
 
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 
 import javafx.scene.control.TextField;
@@ -29,13 +30,16 @@ public class JavaFX extends Application {
 		weather = new TextField();
 		temperature.setText("Today's weather is: "+String.valueOf(forecast.get(0).temperature));
 		weather.setText(forecast.get(0).shortForecast);
-		
+		VBox mainVBox = new VBox(temperature, weather);
+		mainVBox.setPadding(new Insets(15, 15, 15, 15));
+		mainVBox.setSpacing(10);
 		
 		
 				
-		Scene scene = new Scene(new VBox(temperature,weather), 700,700);
-		primaryStage.setScene(scene);
+		Scene sceneDay = new Scene(mainVBox, 700,700);
+		primaryStage.setScene(sceneDay);
 		primaryStage.show();
+		mainVBox.requestFocus();
 	}
 
 }
