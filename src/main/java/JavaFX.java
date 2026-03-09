@@ -4,7 +4,9 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import weather.Period;
 import weather.WeatherAPI;
@@ -33,10 +35,10 @@ public class JavaFX extends Application {
 		VBox mainVBox = new VBox(temperature, weather);
 		mainVBox.setPadding(new Insets(15, 15, 15, 15));
 		mainVBox.setSpacing(10);
-		
-		
+		mainVBox.setBackground(Background.EMPTY);
 				
-		Scene sceneDay = new Scene(mainVBox, 700,700);
+		Scene sceneDay = new Scene(mainVBox, 360,700);
+		sceneDay.setFill(Color.web("#304C89"));
 		primaryStage.setScene(sceneDay);
 		primaryStage.show();
 		mainVBox.requestFocus();
