@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #304c89;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="430.0" prefWidth="300.0" style="-fx-background-color: #648de5; -fx-background-radius: 45;" translateY="40.0">
+         <children>
+            <TextField alignment="CENTER" editable="false" layoutX="115.0" layoutY="132.0" maxWidth="150.0" promptText="Loading..." scaleX="3.0" scaleY="4.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="67">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="50.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="95.0" layoutY="301.0" promptText="Loading..." style="-fx-background-color: transparent; -fx-text-fill: white;" text="Hello">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </children>
+   <padding>
+      <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+   </padding>
+</VBox>
