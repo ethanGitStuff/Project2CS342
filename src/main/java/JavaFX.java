@@ -1,6 +1,8 @@
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import javafx.scene.control.TextField;
@@ -14,16 +16,13 @@ import weather.WeatherAPI;
 import java.util.ArrayList;
 
 public class JavaFX extends Application {
-	TextField temperature,weather;
-
 	public static void main(String[] args) {
 		launch(args);
 	}
-
-	//feel free to remove the starter code from this method
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("I'm a very professional Weather App!");
+		/*
 		ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
 		if (forecast == null){
 			throw new RuntimeException("Forecast did not load");
@@ -31,17 +30,14 @@ public class JavaFX extends Application {
 		temperature = new TextField();
 		weather = new TextField();
 		temperature.setText("Today's weather is: "+String.valueOf(forecast.get(0).temperature));
-		weather.setText(forecast.get(0).shortForecast);
-		VBox mainVBox = new VBox(temperature, weather);
-		mainVBox.setPadding(new Insets(15, 15, 15, 15));
-		mainVBox.setSpacing(10);
-		mainVBox.setBackground(Background.EMPTY);
-				
-		Scene sceneDay = new Scene(mainVBox, 360,700);
-		sceneDay.setFill(Color.web("#304C89"));
+		weather.setText(forecast.get(0).shortForecast);*/
+
+		@SuppressWarnings("ConstantConditions")
+		Parent scene1 = FXMLLoader.load(getClass().getResource("/FXML/proj2SB.fxml"));
+
+		Scene sceneDay = new Scene(scene1, 360,700);
 		primaryStage.setScene(sceneDay);
 		primaryStage.show();
-		mainVBox.requestFocus();
 	}
 
 }
