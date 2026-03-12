@@ -35,7 +35,7 @@ public class JavaFX extends Application {
 		@SuppressWarnings("ConstantConditions")
 		Parent scene1 = FXMLLoader.load(getClass().getResource("/FXML/proj2SB.fxml"));
 
-		Scene sceneDay = new Scene(scene1, 360,700);
+		Scene sceneDay = new Scene(scene1, 400,800);
 		primaryStage.setScene(sceneDay);
 		primaryStage.show();
 	}
