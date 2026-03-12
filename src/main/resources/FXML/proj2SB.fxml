@@ -11,16 +11,30 @@
    <children>
       <Pane fx:id="bubble" minHeight="430.0" minWidth="376.0" prefHeight="430.0" prefWidth="376.0" style="-fx-background-color: #648de5; -fx-background-radius: 45;" translateY="40.0">
          <children>
-            <TextField fx:id="mainTemp" alignment="CENTER" editable="false" layoutX="115.0" layoutY="135.0" maxHeight="100.0" maxWidth="150.0" minHeight="90.0" minWidth="150.0" prefHeight="90.0" prefWidth="150.0" promptText="Loading..." scaleX="3.0" scaleY="4.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="67">
+            <TextField fx:id="mainTemp" alignment="CENTER" editable="false" layoutX="115.0" layoutY="75.0" maxHeight="100.0" maxWidth="150.0" minHeight="90.0" minWidth="150.0" prefHeight="90.0" prefWidth="150.0" promptText="Loading..." scaleX="3.0" scaleY="3.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="67">
                <font>
                   <Font name="Lucida Bright Demibold" size="50.0" />
                </font>
             </TextField>
-            <TextField fx:id="tempDesc" alignment="CENTER" layoutX="93.0" layoutY="306.0" promptText="Loading..." style="-fx-background-color: transparent; -fx-text-fill: white;" text="Hello">
+            <TextField fx:id="tempDesc" alignment="CENTER" editable="false" layoutX="93.0" layoutY="201.0" promptText="Loading..." style="-fx-background-color: transparent; -fx-text-fill: white;" text="Hello">
                <font>
                   <Font name="Century Gothic" size="15.0" />
                </font>
             </TextField>
+            <HBox layoutX="14.0" layoutY="259.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-radius: 45;">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: E8E5DA; -fx-background-radius: 45;">
+                     <children>
+                        <Pane layoutX="36.0" prefHeight="100.0" prefWidth="40.0" style="-fx-background-color: E8E5DA;" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: CDC392; -fx-background-radius: 45;">
+                     <children>
+                        <Pane prefHeight="100.0" prefWidth="40.0" style="-fx-background-color: CDC392;" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
          </children>
       </Pane>
    </children>
