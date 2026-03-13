@@ -22,22 +22,14 @@ public class JavaFX extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("I'm a very professional Weather App!");
-		/*
-		ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
-		if (forecast == null){
-			throw new RuntimeException("Forecast did not load");
-		}
-		temperature = new TextField();
-		weather = new TextField();
-		temperature.setText("Today's weather is: "+String.valueOf(forecast.get(0).temperature));
-		weather.setText(forecast.get(0).shortForecast);*/
 
 		@SuppressWarnings("ConstantConditions")
 		Parent scene1 = FXMLLoader.load(getClass().getResource("/FXML/proj2SB.fxml"));
 
-		Scene sceneDay = new Scene(scene1, 400,800);
+		Scene sceneDay = new Scene(scene1, 400,750);
 		primaryStage.setScene(sceneDay);
 		primaryStage.show();
+		scene1.requestFocus();
 	}
 
 }

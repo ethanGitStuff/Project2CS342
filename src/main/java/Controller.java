@@ -25,9 +25,19 @@ public class Controller implements Initializable {
     @FXML
     private TextField tempDesc;
     @FXML
-    private VBox root;
+    private Pane root;
     @FXML
     private Pane bubble;
+    @FXML
+    private TextField mainWindSpeedLow;
+    @FXML
+    private TextField mainWindSpeedHigh;
+    @FXML
+    private TextField mainWindDir;
+    @FXML
+    private TextField mainPrecip;
+    @FXML
+    private Button threeDayButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -35,7 +45,12 @@ public class Controller implements Initializable {
         if (forecast == null){
             throw new RuntimeException("Forecast did not load");
         }
+        String[] windLex = forecast.get(0).windSpeed.split(" ");
         tempDesc.setText(forecast.get(0).shortForecast);
         mainTemp.setText(String.valueOf(forecast.get(0).temperature));
+        mainWindSpeedLow.setText(windLex[0]);
+        mainWindSpeedHigh.setText(windLex[2]);
+        mainWindDir.setText(forecast.get(0).windDirection);
+        mainPrecip.setText(forecast.get(0).probabilityOfPrecipitation.value + "%");
     }
 }
