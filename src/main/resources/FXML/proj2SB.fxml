@@ -74,9 +74,9 @@
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: CDC392; -fx-background-radius: 45;">
                      <children>
                         <Pane prefHeight="100.0" prefWidth="40.0" style="-fx-background-color: CDC392;" />
-                        <TextField fx:id="mainWindDir" alignment="CENTER" editable="false" layoutX="-55.0" layoutY="35.0" scaleX="2.0" scaleY="2.0" style="-fx-background-color: transparent; -fx-text-fill: E8E5DA;" text="Dir">
+                        <TextField fx:id="mainWindDir" alignment="CENTER" editable="false" layoutX="-43.0" layoutY="35.0" scaleX="2.0" scaleY="2.0" style="-fx-background-color: transparent; -fx-text-fill: E8E5DA;" text="Dir">
                            <font>
-                              <Font name="Century Gothic Bold" size="15.0" />
+                              <Font name="Century Gothic Bold" size="13.0" />
                            </font>
                         </TextField>
                      </children>

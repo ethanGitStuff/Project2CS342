@@ -25,6 +25,8 @@ public class ControllerTodayScene implements Initializable {
     @FXML private TextField mainWindSpeedHigh;
     @FXML private TextField mainWindDir;
     @FXML private TextField mainPrecip;
+    @FXML private TextField basicTO;
+    @FXML private TextField basicMPH;
     @FXML private Button threeDayButton;
     @FXML private Button searchButton;
 
@@ -37,10 +39,19 @@ public class ControllerTodayScene implements Initializable {
             throw new RuntimeException("Forecast did not load");
         }
         String[] windLex = forecast.get(0).windSpeed.split(" ");
+        if (windLex.length > 2) {
+            mainWindSpeedHigh.setText(windLex[2]);
+        }
+        else {
+            mainWindSpeedHigh.setVisible(false);
+            basicTO.setVisible(false);
+            mainWindSpeedLow.setLayoutY(30);
+            basicMPH.setLayoutY(50);
+        }
+
         tempDesc.setText(forecast.get(0).shortForecast);
         mainTemp.setText(String.valueOf(forecast.get(0).temperature));
         mainWindSpeedLow.setText(windLex[0]);
-        //mainWindSpeedHigh.setText(windLex[2]);
         mainWindDir.setText(forecast.get(0).windDirection);
         mainPrecip.setText(forecast.get(0).probabilityOfPrecipitation.value + "%");
     }

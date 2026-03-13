@@ -32,5 +32,4 @@ public class JavaFX extends Application {
 		primaryStage.show();
 		rootDay.requestFocus();
 	}
-
 }
