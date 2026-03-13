@@ -24,13 +24,13 @@ public class JavaFX extends Application {
 		primaryStage.setTitle("I'm a very professional Weather App!");
 
 		@SuppressWarnings("ConstantConditions")
-		Parent scene1 = FXMLLoader.load(getClass().getResource("/FXML/proj2SB.fxml"));
+		Parent rootDay = FXMLLoader.load(getClass().getResource("/FXML/proj2SB.fxml"));
 
-		Scene sceneDay = new Scene(scene1, 400,750);
+		Scene sceneDay = new Scene(rootDay, 400,750);
 		primaryStage.setScene(sceneDay);
 		primaryStage.setResizable(false);
 		primaryStage.show();
-		scene1.requestFocus();
+		rootDay.requestFocus();
 	}
 
 }

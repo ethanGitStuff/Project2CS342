@@ -2,16 +2,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
 import javafx.scene.Parent;
 
@@ -19,10 +16,10 @@ import weather.Period;
 import weather.WeatherAPI;
 import java.util.ArrayList;
 
-public class Controller implements Initializable {
+public class ControllerTodayScene implements Initializable {
     @FXML private TextField mainTemp;
     @FXML private TextField tempDesc;
-    @FXML private Pane root;
+    @FXML private Pane rootDay;
     @FXML private Pane bubble;
     @FXML private TextField mainWindSpeedLow;
     @FXML private TextField mainWindSpeedHigh;
@@ -30,6 +27,8 @@ public class Controller implements Initializable {
     @FXML private TextField mainPrecip;
     @FXML private Button threeDayButton;
     @FXML private Button searchButton;
+
+    //@FXML private ScrollPane rootMultiDay;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -41,8 +40,15 @@ public class Controller implements Initializable {
         tempDesc.setText(forecast.get(0).shortForecast);
         mainTemp.setText(String.valueOf(forecast.get(0).temperature));
         mainWindSpeedLow.setText(windLex[0]);
-        mainWindSpeedHigh.setText(windLex[2]);
+        //mainWindSpeedHigh.setText(windLex[2]);
         mainWindDir.setText(forecast.get(0).windDirection);
         mainPrecip.setText(forecast.get(0).probabilityOfPrecipitation.value + "%");
+    }
+
+    public void multidayButtonClick(ActionEvent e) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/multidayScene.fxml"));
+        Parent rootMultiDay = loader.load();
+        rootDay.getScene().setRoot(rootMultiDay);
+        rootMultiDay.requestFocus();
     }
 }
