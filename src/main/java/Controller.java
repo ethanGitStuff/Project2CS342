@@ -29,6 +29,7 @@ public class Controller implements Initializable {
     @FXML private TextField mainWindDir;
     @FXML private TextField mainPrecip;
     @FXML private Button threeDayButton;
+    @FXML private Button searchButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
