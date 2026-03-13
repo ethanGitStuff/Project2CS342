@@ -28,6 +28,7 @@ public class JavaFX extends Application {
 
 		Scene sceneDay = new Scene(scene1, 400,750);
 		primaryStage.setScene(sceneDay);
+		primaryStage.setResizable(false);
 		primaryStage.show();
 		scene1.requestFocus();
 	}
