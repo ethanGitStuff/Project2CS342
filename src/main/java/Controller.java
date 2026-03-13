@@ -20,24 +20,15 @@ import weather.WeatherAPI;
 import java.util.ArrayList;
 
 public class Controller implements Initializable {
-    @FXML
-    private TextField mainTemp;
-    @FXML
-    private TextField tempDesc;
-    @FXML
-    private Pane root;
-    @FXML
-    private Pane bubble;
-    @FXML
-    private TextField mainWindSpeedLow;
-    @FXML
-    private TextField mainWindSpeedHigh;
-    @FXML
-    private TextField mainWindDir;
-    @FXML
-    private TextField mainPrecip;
-    @FXML
-    private Button threeDayButton;
+    @FXML private TextField mainTemp;
+    @FXML private TextField tempDesc;
+    @FXML private Pane root;
+    @FXML private Pane bubble;
+    @FXML private TextField mainWindSpeedLow;
+    @FXML private TextField mainWindSpeedHigh;
+    @FXML private TextField mainWindDir;
+    @FXML private TextField mainPrecip;
+    @FXML private Button threeDayButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
