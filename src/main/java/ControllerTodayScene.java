@@ -62,4 +62,11 @@ public class ControllerTodayScene implements Initializable {
         rootDay.getScene().setRoot(rootMultiDay);
         rootMultiDay.requestFocus();
     }
+    
+    public void searchButtonClick(ActionEvent e) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/locationSearch.fxml"));
+        Parent rootSearch = loader.load();
+        rootDay.getScene().setRoot(rootSearch);
+        rootSearch.requestFocus();
+    }
 }

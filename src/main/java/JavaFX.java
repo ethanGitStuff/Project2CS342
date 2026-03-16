@@ -10,8 +10,6 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import weather.Period;
-import weather.WeatherAPI;
 
 import java.util.ArrayList;
 
@@ -21,7 +19,7 @@ public class JavaFX extends Application {
 	}
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		primaryStage.setTitle("I'm a very professional Weather App!");
+		primaryStage.setTitle("Weather");
 
 		@SuppressWarnings("ConstantConditions")
 		Parent rootDay = FXMLLoader.load(getClass().getResource("/FXML/proj2SB.fxml"));

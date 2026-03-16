@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 
-<Pane fx:id="rootDay" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304c89;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerTodayScene">
+<Pane fx:id="rootDay" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304c89;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerTodayScene">
    <children>
-      <Pane fx:id="bubble" layoutX="12.0" layoutY="-20.0" maxWidth="375.0" minWidth="375.0" prefHeight="430.0" prefWidth="375.0" style="-fx-background-color: #648de5; -fx-background-radius: 45;" translateY="40.0">
+      <Pane fx:id="bubble" layoutX="12.0" layoutY="-20.0" maxWidth="375.0" minWidth="375.0" prefHeight="575.0" prefWidth="375.0" style="-fx-background-color: #648de5; -fx-background-radius: 45;" translateY="40.0">
          <children>
-            <TextField fx:id="mainTemp" alignment="CENTER" editable="false" layoutX="127.0" layoutY="51.0" maxHeight="100.0" maxWidth="150.0" minHeight="75.0" minWidth="122.0" prefHeight="75.0" prefWidth="122.0" promptText="Loading..." scaleX="3.0" scaleY="3.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="67">
+            <TextField fx:id="mainTemp" alignment="CENTER" editable="false" layoutX="115.0" layoutY="75.0" maxHeight="100.0" maxWidth="150.0" minHeight="90.0" minWidth="150.0" prefHeight="90.0" prefWidth="150.0" promptText="Loading..." scaleX="3.0" scaleY="3.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="67">
                <font>
                   <Font name="Lucida Bright Demibold" size="50.0" />
                </font>
             </TextField>
-            <TextField fx:id="tempDesc" alignment="CENTER" editable="false" layoutX="9.0" layoutY="161.0" prefHeight="75.0" prefWidth="358.0" promptText="Loading..." style="-fx-background-color: transparent; -fx-text-fill: white;" text="why is everything 67 :(">
+            <TextField fx:id="tempDesc" alignment="CENTER" editable="false" layoutX="93.0" layoutY="201.0" promptText="Loading..." style="-fx-background-color: transparent; -fx-text-fill: white;" text="Hello">
                <font>
                   <Font name="Century Gothic" size="15.0" />
                </font>
             </TextField>
-            <Pane layoutX="211.0" layoutY="252.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: CDCDEB; -fx-background-radius: 45;">
+            <Pane layoutX="210.0" layoutY="260.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: CDCDEB; -fx-background-radius: 45;">
                <children>
                   <TextField fx:id="basicCHANCE" alignment="CENTER" editable="false" layoutX="-15.0" layoutY="55.0" scaleY="0.75" style="-fx-background-color: transparent; -fx-text-fill: #6A6CC4;" text="Chance of">
                      <font>
@@ -44,7 +44,7 @@
                   </TextField>
                </children>
             </Pane>
-            <HBox layoutX="14.0" layoutY="252.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-radius: 45;">
+            <HBox layoutX="15.0" layoutY="260.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-radius: 45;">
                <children>
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: E8E5DA; -fx-background-radius: 45;">
                      <children>
@@ -88,30 +88,6 @@
             <DropShadow blurType="TWO_PASS_BOX" color="#000000bf" height="25.0" offsetX="2.0" offsetY="3.0" radius="12.0" width="25.0" />
          </effect>
       </Pane>
-      <Button fx:id="alertsButton" layoutX="21.0" layoutY="603.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;" text="Weather Alerts" textFill="#e8e5da">
-         <font>
-            <Font name="Century Gothic" size="20.0" />
-         </font>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Button>
-      <Button fx:id="favoritesButton" layoutX="21.0" layoutY="536.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;" text="Favorites" textFill="#e8e5da">
-         <font>
-            <Font name="Century Gothic" size="20.0" />
-         </font>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Button>
-      <TextField fx:id="currLocat" alignment="CENTER" editable="false" layoutX="21.0" layoutY="469.0" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-text-fill: #E8E5DA; -fx-background-radius: 45;" text="Current Location">
-         <font>
-            <Font name="Century Gothic" size="20.0" />
-         </font>
-         <effect>
-            <DropShadow />
-         </effect>
-      </TextField>
       <Pane layoutY="675.0" prefHeight="75.0" prefWidth="400.0" style="-fx-background-color: #648de5;">
          <children>
             <Rectangle arcHeight="45.0" arcWidth="10.0" fill="WHITE" height="10.0" layoutX="20.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" width="50.0">
@@ -130,23 +106,20 @@
                </effect>
             </Rectangle>
             <Button fx:id="threeDayButton" layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#multidayButtonClick" opacity="0.0" prefHeight="66.0" prefWidth="65.0" text="Button" />
-            <Button fx:id="searchButton" contentDisplay="CENTER" layoutX="315.0" layoutY="5.0" mnemonicParsing="false" onAction="#searchButtonClick" prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: transparent;">
-               <graphic>
-                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/Subtract.png" />
-                     </image>
-                     <effect>
-                        <DropShadow blurType="TWO_PASS_BOX" color="#000000bf" offsetX="3.0" offsetY="2.0" />
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="homeButton" layoutX="160.0" layoutY="22.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 45; -fx-border-color: #000000; -fx-border-radius: 45; -fx-background-insets: 0;">
+            <Rectangle arcHeight="45.0" arcWidth="30.0" fill="WHITE" height="30.0" layoutX="158.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" width="80.0">
                <effect>
-                  <DropShadow />
+                  <DropShadow blurType="TWO_PASS_BOX" color="#000000bf" height="25.0" offsetX="3.0" offsetY="2.0" radius="12.0" width="25.0" />
                </effect>
-            </Button>
+            </Rectangle>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="315.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Subtract.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#000000bf" offsetX="3.0" offsetY="2.0" />
+               </effect>
+            </ImageView>
+            <Button fx:id="searchButton" layoutX="315.0" layoutY="5.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" text="Button" visible="false" />
          </children>
       </Pane>
    </children>
