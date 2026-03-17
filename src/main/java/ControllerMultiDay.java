@@ -22,10 +22,17 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
 
     @FXML private TextField dayOneDay;
     @FXML private TextField dayOneNight;
+    @FXML private TextField dayOneText;
+
+
     @FXML private TextField dayTwoDay;
     @FXML private TextField dayTwoNight;
+    @FXML private TextField dayTwoText;
+
+
     @FXML private TextField dayThreeDay;
     @FXML private TextField dayThreeNight;
+    @FXML private TextField dayThreeText;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -35,10 +42,15 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
 
         dayOneDay.setText(String.valueOf(JavaFX.forecast.get(2).temperature));
         dayOneNight.setText(String.valueOf(JavaFX.forecast.get(3).temperature));
+        dayOneText.setText(JavaFX.forecast.get(2).name);
+
         dayTwoDay.setText(String.valueOf(JavaFX.forecast.get(4).temperature));
         dayTwoNight.setText(String.valueOf(JavaFX.forecast.get(5).temperature));
+        dayTwoText.setText(JavaFX.forecast.get(4).name);
+
         dayThreeDay.setText(String.valueOf(JavaFX.forecast.get(6).temperature));
         dayThreeNight.setText(String.valueOf(JavaFX.forecast.get(7).temperature));
+        dayThreeText.setText(JavaFX.forecast.get(6).name);
 
         /*
         String[] windLex = forecast.get(0).windSpeed.split(" ");

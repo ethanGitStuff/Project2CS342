@@ -10,83 +10,122 @@
 
 <Pane fx:id="rootMultiDay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304C89;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMultiDay">
    <children>
-      <VBox prefHeight="900.0" prefWidth="400.0" spacing="20.0">
+      <VBox prefHeight="900.0" prefWidth="400.0" spacing="15.0">
          <children>
-            <HBox prefHeight="80.0" prefWidth="200.0" style="-fx-border-style: round;">
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0">
                <children>
-                  <Pane minHeight="200.0" minWidth="188.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
+                  <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                      <children>
-                        <Pane layoutX="138.0" maxWidth="50.0" minHeight="200.0" minWidth="50.0" prefHeight="200.0" prefWidth="50.0" style="-fx-background-color: #9EB7E5;" />
-                        <TextField fx:id="dayOneDay" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                        <TextField fx:id="dayOneText" alignment="CENTER" layoutX="38.0" maxHeight="40.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="dayOneName">
                            <font>
-                              <Font size="45.0" />
+                              <Font name="MS UI Gothic" size="20.0" />
                            </font>
                         </TextField>
                      </children>
                   </Pane>
-                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
+                  <HBox prefHeight="80.0" prefWidth="200.0">
                      <children>
-                        <Pane maxWidth="50.0" minHeight="200.0" minWidth="50.0" prefHeight="200.0" prefWidth="50.0" style="-fx-background-color: #648DE5;" />
-                        <TextField fx:id="dayOneNight" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
-                           <font>
-                              <Font size="45.0" />
-                           </font>
-                        </TextField>
+                        <Pane maxHeight="160.0" minHeight="160.0" minWidth="188.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
+                           <children>
+                              <Pane layoutX="138.0" maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #9EB7E5;" />
+                              <TextField fx:id="dayOneDay" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                                 <font>
+                                    <Font size="45.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane maxHeight="160.0" minHeight="160.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
+                           <children>
+                              <Pane maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #648DE5;" />
+                              <TextField fx:id="dayOneNight" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                                 <font>
+                                    <Font size="45.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
                      </children>
-                  </Pane>
+                  </HBox>
                </children>
-            </HBox>
-            <HBox prefHeight="80.0" prefWidth="200.0" style="-fx-border-style: round;">
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0">
                <children>
-                  <Pane minHeight="200.0" minWidth="188.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
+                  <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                      <children>
-                        <Pane layoutX="138.0" maxWidth="50.0" minHeight="200.0" minWidth="50.0" prefHeight="200.0" prefWidth="50.0" style="-fx-background-color: #9EB7E5;" />
-                        <TextField fx:id="dayTwoDay" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                        <TextField fx:id="dayTwoText" alignment="CENTER" layoutX="38.0" maxHeight="40.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="dayTwoName">
                            <font>
-                              <Font size="45.0" />
+                              <Font name="MS UI Gothic" size="20.0" />
                            </font>
                         </TextField>
                      </children>
                   </Pane>
-                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
+                  <HBox maxHeight="140.0" prefHeight="140.0" prefWidth="200.0" style="-fx-border-style: round;">
                      <children>
-                        <Pane maxWidth="50.0" minHeight="200.0" minWidth="50.0" prefHeight="200.0" prefWidth="50.0" style="-fx-background-color: #648DE5;" />
-                        <TextField fx:id="dayTwoNight" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
-                           <font>
-                              <Font size="45.0" />
-                           </font>
-                        </TextField>
+                        <Pane maxHeight="160.0" minHeight="160.0" minWidth="188.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
+                           <children>
+                              <Pane layoutX="138.0" maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #9EB7E5;" />
+                              <TextField fx:id="dayTwoDay" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                                 <font>
+                                    <Font size="45.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane maxHeight="160.0" minHeight="160.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
+                           <children>
+                              <Pane maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #648DE5;" />
+                              <TextField fx:id="dayTwoNight" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                                 <font>
+                                    <Font size="45.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
                      </children>
-                  </Pane>
+                  </HBox>
                </children>
-            </HBox>
-            <HBox prefHeight="80.0" prefWidth="200.0" style="-fx-border-style: round;">
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0">
                <children>
-                  <Pane minHeight="200.0" minWidth="188.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
+                  <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                      <children>
-                        <Pane layoutX="138.0" maxWidth="50.0" minHeight="200.0" minWidth="50.0" prefHeight="200.0" prefWidth="50.0" style="-fx-background-color: #9EB7E5;" />
-                        <TextField fx:id="dayThreeDay" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                        <TextField fx:id="dayThreeText" alignment="CENTER" layoutX="38.0" maxHeight="40.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="dayThreeName">
                            <font>
-                              <Font size="45.0" />
+                              <Font name="MS UI Gothic" size="20.0" />
                            </font>
                         </TextField>
                      </children>
                   </Pane>
-                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
+                  <HBox prefHeight="80.0" prefWidth="200.0" style="-fx-border-style: round;">
                      <children>
-                        <Pane maxWidth="50.0" minHeight="200.0" minWidth="50.0" prefHeight="200.0" prefWidth="50.0" style="-fx-background-color: #648DE5;" />
-                        <TextField fx:id="dayThreeNight" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
-                           <font>
-                              <Font size="45.0" />
-                           </font>
-                        </TextField>
+                        <Pane maxHeight="160.0" minHeight="160.0" minWidth="188.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
+                           <children>
+                              <Pane layoutX="138.0" maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #9EB7E5;" />
+                              <TextField fx:id="dayThreeDay" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                                 <font>
+                                    <Font size="45.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
+                           <children>
+                              <Pane maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #648DE5;" />
+                              <TextField fx:id="dayThreeNight" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                                 <font>
+                                    <Font size="45.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
                      </children>
-                  </Pane>
+                  </HBox>
                </children>
-            </HBox>
+            </VBox>
          </children>
          <padding>
-            <Insets left="12.0" right="12.0" top="20.0" />
+            <Insets left="12.0" right="12.0" top="12.0" />
          </padding>
       </VBox>
       <MenuComponent fx:id="bottomMenu" menuOn="false" />
