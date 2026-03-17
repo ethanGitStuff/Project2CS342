@@ -19,7 +19,7 @@ import weather.WeatherAPI;
 import java.util.ArrayList;
 
 public class ControllerMultiDay implements Initializable, MenuActionHandler {
-    @FXML ScrollPane rootMultiDay;
+    @FXML Pane rootMultiDay;
     @FXML Button testButton;
     @FXML MenuComponent bottomMenu;
 
@@ -42,13 +42,6 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
 
 
         bottomMenu.setActionHandler(this);
-    }
-
-    public void testButton(ActionEvent e) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/proj2SB.fxml"));
-        Parent rootDay = loader.load();
-        rootMultiDay.getScene().setRoot(rootDay);
-        rootDay.requestFocus();
     }
 
     @Override
