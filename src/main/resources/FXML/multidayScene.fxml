@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import com.custom.components.MenuComponent?>
 
-<ScrollPane fx:id="rootMultiDay" fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="750.0" prefWidth="400.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMultiDay">
+<ScrollPane fx:id="rootMultiDay" fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="750.0" prefWidth="400.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMultiDay">
    <content>
       <Pane prefHeight="900.0" prefWidth="400.0" style="-fx-background-color: #304c89;">
          <children>

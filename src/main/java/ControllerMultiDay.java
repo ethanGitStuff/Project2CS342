@@ -25,6 +25,21 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
+        if (forecast == null){
+            throw new RuntimeException("Forecast did not load");
+        }
+        String[] windLex = forecast.get(0).windSpeed.split(" ");
+        if (windLex.length > 2) {
+            //mainWindSpeedHigh.setText(windLex[2]);
+        }
+        else {
+            //mainWindSpeedHigh.setVisible(false);
+            //basicTO.setVisible(false);
+            //mainWindSpeedLow.setLayoutY(30);
+            //basicMPH.setLayoutY(50);
+        }
+
 
         bottomMenu.setActionHandler(this);
     }

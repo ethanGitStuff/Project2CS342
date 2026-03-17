@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import com.custom.components.MenuComponent?>
 
-<Pane fx:id="rootDay" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304c89;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerTodayScene">
+<Pane fx:id="rootDay" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304c89;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerTodayScene">
    <children>
       <Pane fx:id="bubble" layoutX="12.0" layoutY="-20.0" maxWidth="375.0" minWidth="375.0" prefHeight="430.0" prefWidth="375.0" style="-fx-background-color: #648de5; -fx-background-radius: 45;" translateY="40.0">
          <children>
