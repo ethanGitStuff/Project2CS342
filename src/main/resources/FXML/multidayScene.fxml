@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.custom.components.MenuComponent?>
+
+<ScrollPane fx:id="rootMultiDay" fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="750.0" prefWidth="400.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMultiDay">
+   <content>
+      <Pane prefHeight="900.0" prefWidth="400.0" style="-fx-background-color: #304c89;">
+         <children>
+            <Button fx:id="testButton" layoutX="168.0" layoutY="272.0" mnemonicParsing="false" onAction="#testButton" text="Button" />
+            <MenuComponent fx:id="bottomMenu" menuOn="false"/>
+         </children></Pane>
+   </content>
+</ScrollPane>
