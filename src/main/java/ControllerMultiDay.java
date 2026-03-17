@@ -4,11 +4,9 @@ import java.util.ResourceBundle;
 
 import com.custom.components.MenuActionHandler;
 import com.custom.components.MenuComponent;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
@@ -20,8 +18,14 @@ import java.util.ArrayList;
 
 public class ControllerMultiDay implements Initializable, MenuActionHandler {
     @FXML Pane rootMultiDay;
-    @FXML Button testButton;
     @FXML MenuComponent bottomMenu;
+
+    @FXML private TextField dayOneDay;
+    @FXML private TextField dayOneNight;
+    @FXML private TextField dayTwoDay;
+    @FXML private TextField dayTwoNight;
+    @FXML private TextField dayThreeDay;
+    @FXML private TextField dayThreeNight;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -1,17 +1,8 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-
-import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
-import javafx.scene.control.TextField;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
 
 public class JavaFX extends Application {
 	public static void main(String[] args) {
