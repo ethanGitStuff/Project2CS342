@@ -2,11 +2,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
+import com.custom.components.MenuActionHandler;
+import com.custom.components.MenuComponent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
@@ -16,7 +16,7 @@ import weather.Period;
 import weather.WeatherAPI;
 import java.util.ArrayList;
 
-public class ControllerTodayScene implements Initializable {
+public class ControllerTodayScene implements Initializable, MenuActionHandler {
     @FXML private TextField mainTemp;
     @FXML private TextField tempDesc;
     @FXML private Pane rootDay;
@@ -29,8 +29,9 @@ public class ControllerTodayScene implements Initializable {
     @FXML private TextField basicMPH;
     @FXML private Button threeDayButton;
     @FXML private Button searchButton;
+    @FXML private MenuComponent bottomMenu;
 
-    //@FXML private ScrollPane rootMultiDay;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -54,19 +55,36 @@ public class ControllerTodayScene implements Initializable {
         mainWindSpeedLow.setText(windLex[0]);
         mainWindDir.setText(forecast.get(0).windDirection);
         mainPrecip.setText(forecast.get(0).probabilityOfPrecipitation.value + "%");
+
+        bottomMenu.setActionHandler(this);
     }
 
-    public void multidayButtonClick(ActionEvent e) throws IOException {
+    @Override
+    public void onMenuClick() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/multidayScene.fxml"));
-        Parent rootMultiDay = loader.load();
-        rootDay.getScene().setRoot(rootMultiDay);
-        rootMultiDay.requestFocus();
+        try {
+            Parent rootMultiDay = loader.load();
+            rootDay.getScene().setRoot(rootMultiDay);
+            rootMultiDay.requestFocus();
+        }
+        catch (IOException e) {
+            throw new RuntimeException();
+        }
     }
-    
-    public void searchButtonClick(ActionEvent e) throws IOException {
+
+    @Override
+    public void onHomeClick() { System.out.println("Already at home!"); }
+
+    @Override
+    public void onSearchClick() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/locationSearch.fxml"));
-        Parent rootSearch = loader.load();
-        rootDay.getScene().setRoot(rootSearch);
-        rootSearch.requestFocus();
+        try {
+            Parent rootSearch = loader.load();
+            rootDay.getScene().setRoot(rootSearch);
+            rootSearch.requestFocus();
+        }
+        catch (IOException e) {
+            throw new RuntimeException();
+        }
     }
 }
