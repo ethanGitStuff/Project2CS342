@@ -29,20 +29,28 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
-        if (forecast == null){
+        if (JavaFX.forecast == null){
             throw new RuntimeException("Forecast did not load");
         }
+
+        dayOneDay.setText(String.valueOf(JavaFX.forecast.get(2).temperature));
+        dayOneNight.setText(String.valueOf(JavaFX.forecast.get(3).temperature));
+        dayTwoDay.setText(String.valueOf(JavaFX.forecast.get(4).temperature));
+        dayTwoNight.setText(String.valueOf(JavaFX.forecast.get(5).temperature));
+        dayThreeDay.setText(String.valueOf(JavaFX.forecast.get(6).temperature));
+        dayThreeNight.setText(String.valueOf(JavaFX.forecast.get(7).temperature));
+
+        /*
         String[] windLex = forecast.get(0).windSpeed.split(" ");
         if (windLex.length > 2) {
-            //mainWindSpeedHigh.setText(windLex[2]);
+            mainWindSpeedHigh.setText(windLex[2]);
         }
         else {
-            //mainWindSpeedHigh.setVisible(false);
-            //basicTO.setVisible(false);
-            //mainWindSpeedLow.setLayoutY(30);
-            //basicMPH.setLayoutY(50);
-        }
+            mainWindSpeedHigh.setVisible(false);
+            basicTO.setVisible(false);
+            mainWindSpeedLow.setLayoutY(30);
+            basicMPH.setLayoutY(50);
+        }*/
 
 
         bottomMenu.setActionHandler(this);

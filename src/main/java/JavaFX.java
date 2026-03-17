@@ -3,11 +3,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import weather.Period;
+import weather.WeatherAPI;
+
+import java.util.ArrayList;
 
 public class JavaFX extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+	public static ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
+
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Weather");

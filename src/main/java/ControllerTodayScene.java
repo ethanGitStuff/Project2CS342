@@ -35,11 +35,11 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
-        if (forecast == null){
+        //ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
+        if (JavaFX.forecast == null){
             throw new RuntimeException("Forecast did not load");
         }
-        String[] windLex = forecast.get(0).windSpeed.split(" ");
+        String[] windLex = JavaFX.forecast.get(0).windSpeed.split(" ");
         if (windLex.length > 2) {
             mainWindSpeedHigh.setText(windLex[2]);
         }
@@ -50,11 +50,11 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
             basicMPH.setLayoutY(50);
         }
 
-        tempDesc.setText(forecast.get(0).shortForecast);
-        mainTemp.setText(String.valueOf(forecast.get(0).temperature));
+        tempDesc.setText(JavaFX.forecast.get(0).shortForecast);
+        mainTemp.setText(String.valueOf(JavaFX.forecast.get(0).temperature));
         mainWindSpeedLow.setText(windLex[0]);
-        mainWindDir.setText(forecast.get(0).windDirection);
-        mainPrecip.setText(forecast.get(0).probabilityOfPrecipitation.value + "%");
+        mainWindDir.setText(JavaFX.forecast.get(0).windDirection);
+        mainPrecip.setText(JavaFX.forecast.get(0).probabilityOfPrecipitation.value + "%");
 
         bottomMenu.setActionHandler(this);
     }
