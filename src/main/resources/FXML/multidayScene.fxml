@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="rootMultiDay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304C89;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMultiDay">
+<Pane fx:id="rootMultiDay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304C89;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMultiDay">
    <children>
       <VBox prefHeight="900.0" prefWidth="400.0" spacing="15.0">
          <children>
@@ -16,7 +16,7 @@
                <children>
                   <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                      <children>
-                        <TextField fx:id="dayOneText" alignment="CENTER" layoutX="38.0" maxHeight="40.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="dayOneName">
+                        <TextField fx:id="dayOneText" alignment="CENTER" editable="false" layoutX="38.0" maxHeight="40.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="dayOneName">
                            <font>
                               <Font name="MS UI Gothic" size="20.0" />
                            </font>
@@ -33,6 +33,40 @@
                                     <Font size="45.0" />
                                  </font>
                               </TextField>
+                              <HBox layoutX="34.0" layoutY="80.0" prefHeight="60.0" prefWidth="120.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #CDC392; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane layoutX="30.0" prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #CDC392;" />
+                                          <TextField fx:id="dayOneWind" alignment="CENTER" editable="false" layoutX="9.0" layoutY="10.0" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="00">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="2.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="Up To">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="36.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="MPH">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #E8E5DA; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #E8E5DA;" />
+                                          <TextField fx:id="dayOneWindDir" alignment="CENTER" editable="false" layoutX="-14.0" layoutY="10.0" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-text-fill: #CDC392;" text="Dir">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
                            </children>
                         </Pane>
                         <Pane maxHeight="160.0" minHeight="160.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
@@ -43,6 +77,40 @@
                                     <Font size="45.0" />
                                  </font>
                               </TextField>
+                              <HBox layoutX="34.0" layoutY="80.0" prefHeight="60.0" prefWidth="120.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #CDC392; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane layoutX="30.0" prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #CDC392;" />
+                                          <TextField fx:id="nightOneWind" alignment="CENTER" editable="false" layoutX="9.0" layoutY="10.0" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="00">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="2.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="Up To">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="36.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="MPH">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #E8E5DA; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #E8E5DA;" />
+                                          <TextField fx:id="nightOneWindDir" alignment="CENTER" editable="false" layoutX="-14.0" layoutY="10.0" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-text-fill: #CDC392;" text="Dir">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
                            </children>
                         </Pane>
                      </children>
@@ -53,7 +121,7 @@
                <children>
                   <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                      <children>
-                        <TextField fx:id="dayTwoText" alignment="CENTER" layoutX="38.0" maxHeight="40.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="dayTwoName">
+                        <TextField fx:id="dayTwoText" alignment="CENTER" editable="false" layoutX="38.0" maxHeight="40.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="dayTwoName">
                            <font>
                               <Font name="MS UI Gothic" size="20.0" />
                            </font>
@@ -70,6 +138,40 @@
                                     <Font size="45.0" />
                                  </font>
                               </TextField>
+                              <HBox layoutX="34.0" layoutY="80.0" prefHeight="60.0" prefWidth="120.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #CDC392; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane layoutX="30.0" prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #CDC392;" />
+                                          <TextField fx:id="dayTwoWind" alignment="CENTER" editable="false" layoutX="9.0" layoutY="10.0" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="00">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="2.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="Up To">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="36.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="MPH">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #E8E5DA; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #E8E5DA;" />
+                                          <TextField fx:id="dayTwoWindDir" alignment="CENTER" editable="false" layoutX="-14.0" layoutY="10.0" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-text-fill: #CDC392;" text="Dir">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
                            </children>
                         </Pane>
                         <Pane maxHeight="160.0" minHeight="160.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
@@ -80,6 +182,40 @@
                                     <Font size="45.0" />
                                  </font>
                               </TextField>
+                              <HBox layoutX="34.0" layoutY="80.0" prefHeight="60.0" prefWidth="120.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #CDC392; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane layoutX="30.0" prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #CDC392;" />
+                                          <TextField fx:id="nightTwoWind" alignment="CENTER" editable="false" layoutX="9.0" layoutY="10.0" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="00">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="2.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="Up To">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="36.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="MPH">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #E8E5DA; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #E8E5DA;" />
+                                          <TextField fx:id="nightTwoWindDir" alignment="CENTER" editable="false" layoutX="-14.0" layoutY="10.0" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-text-fill: #CDC392;" text="Dir">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
                            </children>
                         </Pane>
                      </children>
@@ -90,7 +226,7 @@
                <children>
                   <Pane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                      <children>
-                        <TextField fx:id="dayThreeText" alignment="CENTER" layoutX="38.0" maxHeight="40.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="dayThreeName">
+                        <TextField fx:id="dayThreeText" alignment="CENTER" editable="false" layoutX="38.0" maxHeight="40.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="dayThreeName">
                            <font>
                               <Font name="MS UI Gothic" size="20.0" />
                            </font>
@@ -107,6 +243,40 @@
                                     <Font size="45.0" />
                                  </font>
                               </TextField>
+                              <HBox layoutX="34.0" layoutY="80.0" prefHeight="60.0" prefWidth="120.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #CDC392; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane layoutX="30.0" prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #CDC392;" />
+                                          <TextField fx:id="dayThreeWind" alignment="CENTER" editable="false" layoutX="9.0" layoutY="10.0" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="00">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="2.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="Up To">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="36.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="MPH">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #E8E5DA; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #E8E5DA;" />
+                                          <TextField fx:id="dayThreeWindDir" alignment="CENTER" editable="false" layoutX="-14.0" layoutY="10.0" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-text-fill: #CDC392;" text="Dir">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
@@ -117,6 +287,40 @@
                                     <Font size="45.0" />
                                  </font>
                               </TextField>
+                              <HBox layoutX="34.0" layoutY="80.0" prefHeight="60.0" prefWidth="120.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #CDC392; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane layoutX="30.0" prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #CDC392;" />
+                                          <TextField fx:id="nightThreeWind" alignment="CENTER" editable="false" layoutX="9.0" layoutY="10.0" prefHeight="40.0" prefWidth="45.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="00">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="2.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="Up To">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="36.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-text-fill: #E8E5DA;" text="MPH">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #E8E5DA; -fx-background-radius: 45;">
+                                       <children>
+                                          <Pane prefHeight="60.0" prefWidth="30.0" style="-fx-background-color: #E8E5DA;" />
+                                          <TextField fx:id="nightThreeWindDir" alignment="CENTER" editable="false" layoutX="-14.0" layoutY="10.0" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-text-fill: #CDC392;" text="Dir">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
                            </children>
                         </Pane>
                      </children>
