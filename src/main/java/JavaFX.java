@@ -44,9 +44,17 @@ public class JavaFX extends Application {
 
 		// pull data from forecast ArrayList to be used in displaying three-day forecast tab
 		today = new Day(forecast.get(0));
-		dayOne = new DayPair(forecast.get(1), forecast.get(2));
-		dayTwo = new DayPair(forecast.get(3), forecast.get(4));
-		dayThree = new DayPair(forecast.get(5), forecast.get(6));
+
+		if (forecast.get(1).name.equals("Tonight")) {
+			dayOne = new DayPair(forecast.get(2), forecast.get(3));
+			dayTwo = new DayPair(forecast.get(4), forecast.get(5));
+			dayThree = new DayPair(forecast.get(6), forecast.get(7));
+		}
+		else {
+			dayOne = new DayPair(forecast.get(1), forecast.get(2));
+			dayTwo = new DayPair(forecast.get(3), forecast.get(4));
+			dayThree = new DayPair(forecast.get(5), forecast.get(6));
+		}
 
 		primaryStage.setTitle("Weather");
 

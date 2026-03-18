@@ -12,7 +12,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
 import javafx.scene.Parent;
-import javafx.animation.*;
 
 public class ControllerMultiDay implements Initializable, MenuActionHandler {
 	// FXML elements
@@ -47,7 +46,6 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
     @FXML private Button dayOneZoom;
     @FXML private Button dayTwoZoom;
     @FXML private Button dayThreeZoom;
-    @FXML private Button exitZoom;
 
     @FXML private TextField zoomDayTemp;
     @FXML private TextField zoomNightTemp;
@@ -98,23 +96,69 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
     public void onDayOneClick(ActionEvent e) throws IOException{
         zoomPane.setDisable(false);
         zoomPane.setVisible(true);
+
         zoomDayTemp.setText(String.valueOf(JavaFX.dayOne.day.temp));
+        zoomWindSpeedDay.setText(JavaFX.dayOne.day.windHigh);
+        zoomWindDirDay.setText(JavaFX.dayOne.day.windDir);
+        zoomPrecipDay.setText(String.valueOf(JavaFX.dayOne.day.precip) + "%");
+
+        zoomNightTemp.setText(String.valueOf(JavaFX.dayOne.night.temp));
+        zoomWindSpeedNight.setText(JavaFX.dayOne.night.windHigh);
+        zoomWindDirNight.setText(JavaFX.dayOne.night.windDir);
+        zoomPrecipNight.setText(JavaFX.dayOne.night.precip + "%");
+
+        dayOneZoom.setDisable(true);
+        dayTwoZoom.setDisable(true);
+        dayThreeZoom.setDisable(true);
     }
 
     public void onDayTwoClick(ActionEvent e) throws IOException{
         zoomPane.setDisable(false);
         zoomPane.setVisible(true);
+
+        zoomDayTemp.setText(String.valueOf(JavaFX.dayTwo.day.temp));
+        zoomWindSpeedDay.setText(JavaFX.dayTwo.day.windHigh);
+        zoomWindDirDay.setText(JavaFX.dayTwo.day.windDir);
+        zoomPrecipDay.setText(JavaFX.dayTwo.day.precip + "%");
+
+        zoomNightTemp.setText(String.valueOf(JavaFX.dayTwo.night.temp));
+        zoomWindSpeedNight.setText(JavaFX.dayTwo.night.windHigh);
+        zoomWindDirNight.setText(JavaFX.dayTwo.night.windDir);
+        zoomPrecipNight.setText(JavaFX.dayTwo.night.precip + "%");
+
+        dayOneZoom.setDisable(true);
+        dayTwoZoom.setDisable(true);
+        dayThreeZoom.setDisable(true);
     }
 
     public void onDayThreeClick(ActionEvent e) throws IOException{
         zoomPane.setDisable(false);
         zoomPane.setVisible(true);
+
+        zoomDayTemp.setText(String.valueOf(JavaFX.dayThree.day.temp));
+        zoomWindSpeedDay.setText(JavaFX.dayThree.day.windHigh);
+        zoomWindDirDay.setText(JavaFX.dayThree.day.windDir);
+        zoomPrecipDay.setText(JavaFX.dayThree.day.precip + "%");
+
+        zoomNightTemp.setText(String.valueOf(JavaFX.dayThree.night.temp));
+        zoomWindSpeedNight.setText(JavaFX.dayThree.night.windHigh);
+        zoomWindDirNight.setText(JavaFX.dayThree.night.windDir);
+        zoomPrecipNight.setText(JavaFX.dayThree.night.precip + "%");
+
+        dayOneZoom.setDisable(true);
+        dayTwoZoom.setDisable(true);
+        dayThreeZoom.setDisable(true);
     }
 
     public void onExitClick(ActionEvent e) throws IOException{
         zoomPane.setDisable(true);
         zoomPane.setVisible(false);
+
+        dayOneZoom.setDisable(false);
+        dayTwoZoom.setDisable(false);
+        dayThreeZoom.setDisable(false);
     }
+
 
     @Override
     public void onMenuClick() { System.out.println("Already on Multi-day forecast!"); }

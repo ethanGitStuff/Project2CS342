@@ -77,6 +77,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <TextField alignment="CENTER" editable="false" layoutX="34.0" maxHeight="40.0" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Day">
+                                 <font>
+                                    <Font name="Century Gothic" size="20.0" />
+                                 </font>
+                              </TextField>
                            </children>
                         </Pane>
                         <Pane maxHeight="160.0" minHeight="160.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
@@ -121,6 +126,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <TextField alignment="CENTER" editable="false" layoutX="35.0" maxHeight="40.0" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Night">
+                                 <font>
+                                    <Font name="Century Gothic" size="20.0" />
+                                 </font>
+                              </TextField>
                            </children>
                         </Pane>
                      </children>
@@ -196,6 +206,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <TextField alignment="CENTER" editable="false" layoutX="34.0" maxHeight="40.0" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Day">
+                                 <font>
+                                    <Font name="Century Gothic" size="20.0" />
+                                 </font>
+                              </TextField>
                            </children>
                         </Pane>
                         <Pane maxHeight="160.0" minHeight="160.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
@@ -240,6 +255,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <TextField alignment="CENTER" editable="false" layoutX="35.0" maxHeight="40.0" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Night">
+                                 <font>
+                                    <Font name="Century Gothic" size="20.0" />
+                                 </font>
+                              </TextField>
                            </children>
                         </Pane>
                      </children>
@@ -315,6 +335,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <TextField alignment="CENTER" editable="false" layoutX="34.0" maxHeight="40.0" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Day">
+                                 <font>
+                                    <Font name="Century Gothic" size="20.0" />
+                                 </font>
+                              </TextField>
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
@@ -359,6 +384,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <TextField alignment="CENTER" editable="false" layoutX="35.0" maxHeight="40.0" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Night">
+                                 <font>
+                                    <Font name="Century Gothic" size="20.0" />
+                                 </font>
+                              </TextField>
                            </children>
                         </Pane>
                      </children>
@@ -434,7 +464,7 @@
                         </HBox>
                         <Pane layoutX="196.0" layoutY="210.0" prefHeight="100.0" prefWidth="180.0" style="-fx-background-color: #6A6CC4; -fx-background-radius: 45;">
                            <children>
-                              <TextField fx:id="zommPrecipDay" alignment="CENTER" editable="false" layoutX="37.0" layoutY="14.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: #CDCDEB;" text="00%">
+                              <TextField fx:id="zoomPrecipDay" alignment="CENTER" editable="false" layoutX="37.0" layoutY="14.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: #CDCDEB;" text="00%">
                                  <font>
                                     <Font name="Century Gothic Bold" size="25.0" />
                                  </font>
@@ -510,7 +540,7 @@
                         </HBox>
                         <Pane layoutX="196.0" layoutY="136.0" prefHeight="100.0" prefWidth="180.0" style="-fx-background-radius: 45; -fx-background-color: #CDCDEB;">
                            <children>
-                              <TextField fx:id="zommPrecipNight" alignment="CENTER" editable="false" layoutX="37.0" layoutY="14.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: #6A6CC4;" text="00%">
+                              <TextField fx:id="zoomPrecipNight" alignment="CENTER" editable="false" layoutX="37.0" layoutY="14.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: #6A6CC4;" text="00%">
                                  <font>
                                     <Font name="Century Gothic Bold" size="25.0" />
                                  </font>
