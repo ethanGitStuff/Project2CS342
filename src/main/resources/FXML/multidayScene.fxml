@@ -378,7 +378,7 @@
          </padding>
       </VBox>
       <MenuComponent fx:id="bottomMenu" menuOn="false" />
-      <Pane disable="true" layoutX="10.0" layoutY="10.0" prefHeight="656.0" prefWidth="380.0" style="-fx-background-color: #304C89;" visible="false">
+      <Pane fx:id="zoomPane" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="656.0" prefWidth="380.0" style="-fx-background-color: #304C89;" visible="false">
          <children>
             <VBox prefHeight="656.0" prefWidth="380.0">
                <children>
@@ -451,7 +451,7 @@
                               </TextField>
                            </children>
                         </Pane>
-                        <Button fx:id="exitZoom" contentDisplay="CENTER" layoutX="325.0" layoutY="6.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" text="X" textFill="#304c89">
+                        <Button fx:id="exitZoom" contentDisplay="CENTER" layoutX="325.0" layoutY="6.0" mnemonicParsing="false" onAction="#onExitClick" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" text="X" textFill="#304c89">
                            <font>
                               <Font name="Century Gothic Bold" size="23.0" />
                            </font>
@@ -541,7 +541,7 @@
          </children>
       </Pane>
       <Button fx:id="dayOneZoom" layoutX="10.0" mnemonicParsing="false" onAction="#onDayOneClick" opacity="0.0" prefHeight="160.0" prefWidth="380.0" text="Button" translateY="60.0" />
-      <Button fx:id="dayTwoZoom" layoutX="10.0" layoutY="280.0" mnemonicParsing="false" prefHeight="160.0" prefWidth="380.0" text="Button" visible="false" />
-      <Button fx:id="dayThreeZoom" layoutX="10.0" layoutY="500.0" mnemonicParsing="false" prefHeight="160.0" prefWidth="380.0" text="Button" visible="false" />
+      <Button fx:id="dayTwoZoom" layoutX="10.0" layoutY="280.0" mnemonicParsing="false" onAction="#onDayTwoClick" opacity="0.0" prefHeight="160.0" prefWidth="380.0" text="Button" />
+      <Button fx:id="dayThreeZoom" layoutX="10.0" layoutY="500.0" mnemonicParsing="false" onAction="#onDayThreeClick" opacity="0.0" prefHeight="160.0" prefWidth="380.0" text="Button" />
    </children>
 </Pane>

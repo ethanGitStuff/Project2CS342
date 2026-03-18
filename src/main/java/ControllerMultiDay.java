@@ -17,6 +17,7 @@ import javafx.animation.*;
 public class ControllerMultiDay implements Initializable, MenuActionHandler {
 	// FXML elements
     @FXML Pane rootMultiDay;
+    @FXML Pane zoomPane;
     @FXML MenuComponent bottomMenu;
 
     @FXML private TextField dayOneDay;
@@ -95,7 +96,24 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
     }
 
     public void onDayOneClick(ActionEvent e) throws IOException{
-        System.out.println("Day One Click");
+        zoomPane.setDisable(false);
+        zoomPane.setVisible(true);
+        zoomDayTemp.setText(String.valueOf(JavaFX.dayOne.day.temp));
+    }
+
+    public void onDayTwoClick(ActionEvent e) throws IOException{
+        zoomPane.setDisable(false);
+        zoomPane.setVisible(true);
+    }
+
+    public void onDayThreeClick(ActionEvent e) throws IOException{
+        zoomPane.setDisable(false);
+        zoomPane.setVisible(true);
+    }
+
+    public void onExitClick(ActionEvent e) throws IOException{
+        zoomPane.setDisable(true);
+        zoomPane.setVisible(false);
     }
 
     @Override
