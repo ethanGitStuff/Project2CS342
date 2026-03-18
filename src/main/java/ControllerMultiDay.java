@@ -12,10 +12,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
 import javafx.scene.Parent;
 
-import weather.Period;
-import weather.WeatherAPI;
-import java.util.ArrayList;
-
 public class ControllerMultiDay implements Initializable, MenuActionHandler {
     @FXML Pane rootMultiDay;
     @FXML MenuComponent bottomMenu;
@@ -40,30 +36,17 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
             throw new RuntimeException("Forecast did not load");
         }
 
-        dayOneDay.setText(String.valueOf(JavaFX.forecast.get(2).temperature));
-        dayOneNight.setText(String.valueOf(JavaFX.forecast.get(3).temperature));
-        dayOneText.setText(JavaFX.forecast.get(2).name);
+        dayOneDay.setText(String.valueOf(JavaFX.dayOne.day.temp));
+        dayOneNight.setText(String.valueOf(JavaFX.dayOne.night.temp));
+        dayOneText.setText(JavaFX.dayOne.day.name);
 
-        dayTwoDay.setText(String.valueOf(JavaFX.forecast.get(4).temperature));
-        dayTwoNight.setText(String.valueOf(JavaFX.forecast.get(5).temperature));
-        dayTwoText.setText(JavaFX.forecast.get(4).name);
+        dayTwoDay.setText(String.valueOf(JavaFX.dayTwo.day.temp));
+        dayTwoNight.setText(String.valueOf(JavaFX.dayTwo.night.temp));
+        dayTwoText.setText(JavaFX.dayTwo.day.name);
 
-        dayThreeDay.setText(String.valueOf(JavaFX.forecast.get(6).temperature));
-        dayThreeNight.setText(String.valueOf(JavaFX.forecast.get(7).temperature));
-        dayThreeText.setText(JavaFX.forecast.get(6).name);
-
-        /*
-        String[] windLex = forecast.get(0).windSpeed.split(" ");
-        if (windLex.length > 2) {
-            mainWindSpeedHigh.setText(windLex[2]);
-        }
-        else {
-            mainWindSpeedHigh.setVisible(false);
-            basicTO.setVisible(false);
-            mainWindSpeedLow.setLayoutY(30);
-            basicMPH.setLayoutY(50);
-        }*/
-
+        dayThreeDay.setText(String.valueOf(JavaFX.dayThree.day.temp));
+        dayThreeNight.setText(String.valueOf(JavaFX.dayThree.night.temp));
+        dayThreeText.setText(JavaFX.dayThree.day.name);
 
         bottomMenu.setActionHandler(this);
     }

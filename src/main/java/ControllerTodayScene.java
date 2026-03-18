@@ -18,27 +18,42 @@ import java.util.ArrayList;
 
 public class ControllerTodayScene implements Initializable, MenuActionHandler {
     @FXML private TextField mainTemp;
-    @FXML private TextField tempDesc;
+    @FXML private TextField foreDesc;
     @FXML private Pane rootDay;
-    @FXML private Pane bubble;
     @FXML private TextField mainWindSpeedLow;
     @FXML private TextField mainWindSpeedHigh;
     @FXML private TextField mainWindDir;
     @FXML private TextField mainPrecip;
     @FXML private TextField basicTO;
     @FXML private TextField basicMPH;
-    @FXML private Button threeDayButton;
-    @FXML private Button searchButton;
     @FXML private MenuComponent bottomMenu;
 
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
         if (JavaFX.forecast == null){
             throw new RuntimeException("Forecast did not load");
         }
+
+        if (JavaFX.today.windRange) {
+            mainWindSpeedHigh.setText(JavaFX.today.windHigh);
+        }
+        else {
+            mainWindSpeedHigh.setVisible(false);
+            basicTO.setVisible(false);
+            mainWindSpeedLow.setLayoutY(30);
+            basicMPH.setLayoutY(50);
+        }
+
+        foreDesc.setText(JavaFX.today.desc);
+        mainTemp.setText(String.valueOf(JavaFX.today.temp));
+        mainWindSpeedLow.setText(JavaFX.today.windLow);
+        mainWindDir.setText(JavaFX.today.windDir);
+        // Not sure why
+        mainPrecip.setText(JavaFX.today.precip + "%");
+
+        /*
         String[] windLex = JavaFX.forecast.get(0).windSpeed.split(" ");
         if (windLex.length > 2) {
             mainWindSpeedHigh.setText(windLex[2]);
@@ -55,6 +70,7 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
         mainWindSpeedLow.setText(windLex[0]);
         mainWindDir.setText(JavaFX.forecast.get(0).windDirection);
         mainPrecip.setText(JavaFX.forecast.get(0).probabilityOfPrecipitation.value + "%");
+         */
 
         bottomMenu.setActionHandler(this);
     }

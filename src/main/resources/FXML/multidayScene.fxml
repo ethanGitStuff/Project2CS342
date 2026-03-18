@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="rootMultiDay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304C89;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMultiDay">
+<Pane fx:id="rootMultiDay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304C89;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMultiDay">
    <children>
       <VBox prefHeight="900.0" prefWidth="400.0" spacing="15.0">
          <children>
@@ -60,7 +60,7 @@
                         </TextField>
                      </children>
                   </Pane>
-                  <HBox maxHeight="140.0" prefHeight="140.0" prefWidth="200.0" style="-fx-border-style: round;">
+                  <HBox maxHeight="140.0" prefHeight="140.0" prefWidth="200.0">
                      <children>
                         <Pane maxHeight="160.0" minHeight="160.0" minWidth="188.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                            <children>
@@ -97,7 +97,7 @@
                         </TextField>
                      </children>
                   </Pane>
-                  <HBox prefHeight="80.0" prefWidth="200.0" style="-fx-border-style: round;">
+                  <HBox prefHeight="80.0" prefWidth="200.0">
                      <children>
                         <Pane maxHeight="160.0" minHeight="160.0" minWidth="188.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                            <children>
