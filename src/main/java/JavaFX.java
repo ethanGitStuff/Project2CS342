@@ -29,6 +29,8 @@ public class JavaFX extends Application {
 	public static DayPair dayTwo;
 	public static DayPair dayThree;
 
+	public static ArrayList<String> favorites = new ArrayList<>();
+
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// cities_clean.JSON derived from Miserlou on github at

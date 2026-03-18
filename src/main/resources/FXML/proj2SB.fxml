@@ -98,7 +98,7 @@
                </color></DropShadow>
          </effect>
       </Button>
-      <Button fx:id="favoritesButton" layoutX="21.0" layoutY="536.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;" text="Favorites" textFill="#e8e5da">
+      <Button fx:id="favoritesButton" onAction="#onFavoritesClick" layoutX="21.0" layoutY="536.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;" text="Favorites" textFill="#e8e5da">
          <font>
             <Font name="Century Gothic" size="20.0" />
          </font>

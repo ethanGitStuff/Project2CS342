@@ -4,6 +4,7 @@ import java.util.ResourceBundle;
 
 import com.custom.components.MenuActionHandler;
 import com.custom.components.MenuComponent;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -27,6 +28,7 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
     @FXML private TextField mainPrecip;
     @FXML private TextField basicTO;
     @FXML private TextField basicMPH;
+    @FXML private Button favoritesButton;
     @FXML private MenuComponent bottomMenu;
 
 
@@ -86,5 +88,18 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
         catch (IOException e) {
             throw new RuntimeException();
         }
+    }
+
+    public void onFavoritesClick(ActionEvent e) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/favoriteLocations.fxml"));
+        try {
+            Parent rootFavorites = loader.load();
+            rootDay.getScene().setRoot(rootFavorites);
+            rootFavorites.requestFocus();
+        }
+        catch (IOException x) {
+            throw new RuntimeException();
+        }
+
     }
 }
