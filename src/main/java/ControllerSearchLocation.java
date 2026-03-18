@@ -20,12 +20,18 @@ import javafx.scene.Parent;
 import javafx.util.Pair;
 
 public class ControllerSearchLocation implements Initializable, MenuActionHandler {
+	// FXML elements
     @FXML private Pane rootSearch;
     @FXML private MenuComponent bottomMenu;
     @FXML private TextField searchBar;
     @FXML private ListView<String> listBox;
     @FXML private Button searchButton;
 
+    /*
+     * Search action event handler
+     * Defines how to handle search event to display cities based on user input
+     * Takes in an ActionEvent, returns nothing
+     */
     @FXML
     private void search(ActionEvent e) {
         listBox.getItems().clear();
@@ -34,6 +40,7 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
         searchBar.clear();
     }
 
+    // variables for control - could this be a map instead?
     static private ArrayList<String> currentCities;
     static private ArrayList<Pair<Float, Float>> coordinates;
 

@@ -11,8 +11,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
 import javafx.scene.Parent;
+import javafx.animation.*;
 
 public class ControllerMultiDay implements Initializable, MenuActionHandler {
+	// FXML elements
     @FXML Pane rootMultiDay;
     @FXML MenuComponent bottomMenu;
 
@@ -42,10 +44,12 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+    	// error checking for default location API request
         if (JavaFX.forecast == null){
             throw new RuntimeException("Forecast did not load");
         }
-
+        
+        // using data parsed from API request, set textfields with information on day 1 card
         dayOneDay.setText(String.valueOf(JavaFX.dayOne.day.temp));
         dayOneWind.setText(JavaFX.dayOne.day.windHigh);
         dayOneWindDir.setText(JavaFX.dayOne.day.windDir);
@@ -54,6 +58,7 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
         nightOneWindDir.setText(JavaFX.dayOne.night.windDir);
         dayOneText.setText(JavaFX.dayOne.day.name);
 
+        // using data parsed from API request, set textfields with information on day 2 card
         dayTwoDay.setText(String.valueOf(JavaFX.dayTwo.day.temp));
         dayTwoWind.setText(JavaFX.dayTwo.day.windHigh);
         dayTwoWindDir.setText(JavaFX.dayTwo.day.windDir);
@@ -62,6 +67,7 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
         nightTwoWindDir.setText(JavaFX.dayTwo.night.windDir);
         dayTwoText.setText(JavaFX.dayTwo.day.name);
 
+        // using data parsed from API request, set textfields with information on day 3 card
         dayThreeDay.setText(String.valueOf(JavaFX.dayThree.day.temp));
         dayThreeWind.setText(JavaFX.dayThree.day.windHigh);
         dayThreeWindDir.setText(JavaFX.dayThree.day.windDir);

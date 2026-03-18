@@ -17,6 +17,7 @@ import weather.WeatherAPI;
 import java.util.ArrayList;
 
 public class ControllerTodayScene implements Initializable, MenuActionHandler {
+	// FXML elements
     @FXML private TextField mainTemp;
     @FXML private TextField foreDesc;
     @FXML private Pane rootDay;
@@ -32,10 +33,12 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+    	// error checking for default location API request
         if (JavaFX.forecast == null){
             throw new RuntimeException("Forecast did not load");
         }
 
+        // handle and set wind range output
         if (JavaFX.today.windRange) {
             mainWindSpeedHigh.setText(JavaFX.today.windHigh);
         }
@@ -46,6 +49,7 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
             basicMPH.setLayoutY(50);
         }
 
+        // set other card information based on API output
         foreDesc.setText(JavaFX.today.desc);
         mainTemp.setText(String.valueOf(JavaFX.today.temp));
         mainWindSpeedLow.setText(JavaFX.today.windLow);

@@ -20,7 +20,9 @@ public class JavaFX extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-	public static ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
+	
+	// variables for control
+	public static ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70); // load data of default location into forecast
 	public static ArrayList<City> Cities;
 	public static Day today;
 	public static DayPair dayOne;
@@ -29,15 +31,15 @@ public class JavaFX extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-
+		// pull data from cities_clean json file and parse into ArrayList Cities
 		ObjectMapper mapper = new ObjectMapper();
 		InputStream json = JavaFX.class.getClassLoader().getResourceAsStream("Other/cities_clean.json");
 		if (json == null) {
-			throw new RuntimeException();
+			throw new RuntimeException("City file could not be opened."); // basic error handling
 		}
 		Cities = mapper.readValue(json, new TypeReference<ArrayList<City>>() {});
 
-
+		// pull data from forecast ArrayList to be used in displaying three-day forecast tab
 		today = new Day(forecast.get(0));
 		dayOne = new DayPair(forecast.get(1), forecast.get(2));
 		dayTwo = new DayPair(forecast.get(3), forecast.get(4));
@@ -48,6 +50,7 @@ public class JavaFX extends Application {
 		@SuppressWarnings("ConstantConditions")
 		Parent rootDay = FXMLLoader.load(getClass().getResource("/FXML/proj2SB.fxml"));
 
+		// load app
 		Scene sceneDay = new Scene(rootDay, 400,750);
 		primaryStage.setScene(sceneDay);
 		primaryStage.setResizable(false);
