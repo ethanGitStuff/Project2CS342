@@ -31,6 +31,9 @@ public class JavaFX extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		// cities_clean.JSON derived from Miserlou on github at
+		// https://gist.github.com/Miserlou/c5cd8364bf9b2420bb29
+		// Then we removed the parts of the data we did not need.
 		// pull data from cities_clean json file and parse into ArrayList Cities
 		ObjectMapper mapper = new ObjectMapper();
 		InputStream json = JavaFX.class.getClassLoader().getResourceAsStream("Other/cities_clean.json");

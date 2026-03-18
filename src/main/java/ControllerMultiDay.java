@@ -4,6 +4,7 @@ import java.util.ResourceBundle;
 
 import com.custom.components.MenuActionHandler;
 import com.custom.components.MenuComponent;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -42,6 +43,20 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
     @FXML private TextField nightThreeWindDir;
     @FXML private TextField dayThreeText;
 
+    @FXML private Button dayOneZoom;
+    @FXML private Button dayTwoZoom;
+    @FXML private Button dayThreeZoom;
+    @FXML private Button exitZoom;
+
+    @FXML private TextField zoomDayTemp;
+    @FXML private TextField zoomNightTemp;
+    @FXML private TextField zoomWindSpeedDay;
+    @FXML private TextField zoomWindDirDay;
+    @FXML private TextField zoomPrecipDay;
+    @FXML private TextField zoomWindSpeedNight;
+    @FXML private TextField zoomWindDirNight;
+    @FXML private TextField zoomPrecipNight;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     	// error checking for default location API request
@@ -77,6 +92,10 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
         dayThreeText.setText(JavaFX.dayThree.day.name);
 
         bottomMenu.setActionHandler(this);
+    }
+
+    public void onDayOneClick(ActionEvent e) throws IOException{
+        System.out.println("Day One Click");
     }
 
     @Override
