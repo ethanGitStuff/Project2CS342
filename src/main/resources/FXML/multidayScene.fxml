@@ -3,9 +3,11 @@
 <?import com.custom.components.MenuComponent?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <Pane fx:id="rootMultiDay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304C89;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerMultiDay">
@@ -22,6 +24,13 @@
                            </font>
                         </TextField>
                      </children>
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" offsetX="2.0" offsetY="3.0">
+                           <color>
+                              <Color opacity="0.75" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </Pane>
                   <HBox prefHeight="80.0" prefWidth="200.0">
                      <children>
@@ -114,6 +123,13 @@
                            </children>
                         </Pane>
                      </children>
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" offsetX="2.0" offsetY="3.0">
+                           <color>
+                              <Color opacity="0.75" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </HBox>
                </children>
             </VBox>
@@ -127,6 +143,13 @@
                            </font>
                         </TextField>
                      </children>
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" offsetX="2.0" offsetY="3.0">
+                           <color>
+                              <Color opacity="0.75" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </Pane>
                   <HBox maxHeight="140.0" prefHeight="140.0" prefWidth="200.0">
                      <children>
@@ -219,6 +242,13 @@
                            </children>
                         </Pane>
                      </children>
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" offsetX="2.0" offsetY="3.0">
+                           <color>
+                              <Color opacity="0.75" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </HBox>
                </children>
             </VBox>
@@ -232,6 +262,13 @@
                            </font>
                         </TextField>
                      </children>
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" offsetX="2.0" offsetY="3.0">
+                           <color>
+                              <Color opacity="0.75" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </Pane>
                   <HBox prefHeight="80.0" prefWidth="200.0">
                      <children>
@@ -324,6 +361,13 @@
                            </children>
                         </Pane>
                      </children>
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" offsetX="2.0" offsetY="3.0">
+                           <color>
+                              <Color opacity="0.75" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </HBox>
                </children>
             </VBox>

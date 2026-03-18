@@ -1,7 +1,8 @@
+import com.custom.classes.City;
 import com.custom.classes.Day;
 import com.custom.classes.DayPair;
+import com.fasterxml.jackson.core.type.TypeReference;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,13 +10,18 @@ import javafx.stage.Stage;
 import weather.Period;
 import weather.WeatherAPI;
 
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.io.File;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 public class JavaFX extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
 	public static ArrayList<Period> forecast = WeatherAPI.getForecast("LOT",77,70);
+	public static ArrayList<City> Cities;
 	public static Day today;
 	public static DayPair dayOne;
 	public static DayPair dayTwo;
@@ -23,6 +29,15 @@ public class JavaFX extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+
+		ObjectMapper mapper = new ObjectMapper();
+		InputStream json = JavaFX.class.getClassLoader().getResourceAsStream("Other/cities_clean.json");
+		if (json == null) {
+			throw new RuntimeException();
+		}
+		Cities = mapper.readValue(json, new TypeReference<ArrayList<City>>() {});
+
+
 		today = new Day(forecast.get(0));
 		dayOne = new DayPair(forecast.get(1), forecast.get(2));
 		dayTwo = new DayPair(forecast.get(3), forecast.get(4));

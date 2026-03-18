@@ -1,42 +1,49 @@
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
+import com.custom.classes.City;
 import com.custom.components.MenuActionHandler;
 import com.custom.components.MenuComponent;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
 import javafx.scene.Parent;
+import javafx.util.Pair;
 
 public class ControllerSearchLocation implements Initializable, MenuActionHandler {
-    @FXML private Button threeDayButton;
-    @FXML private Button searchButton;
-    @FXML private Button homeButton;
     @FXML private Pane rootSearch;
     @FXML private MenuComponent bottomMenu;
+    @FXML private TextField searchBar;
+    @FXML private ListView<String> listBox;
+    @FXML private Button searchButton;
 
-	/*
-	public void multidayButtonClick(ActionEvent e) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/multidayScene.fxml"));
-        Parent rootMultiDay = loader.load();
-        rootSearch.getScene().setRoot(rootMultiDay);
-        rootMultiDay.requestFocus();
+    @FXML
+    private void search(ActionEvent e) {
+        listBox.getItems().clear();
+        searchArray(searchBar.getText());
+        listBox.getItems().addAll(currentCities);
+        searchBar.clear();
     }
 
-	public void homeButtonClick(ActionEvent e) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/proj2SB.fxml"));
-        Parent rootDay = loader.load();
-        rootSearch.getScene().setRoot(rootDay);
-        rootDay.requestFocus();
-    }*/
+    static private ArrayList<String> currentCities;
+    static private ArrayList<Pair<Float, Float>> coordinates;
+
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+        currentCities = new ArrayList<String>();
+        coordinates = new ArrayList<Pair<Float, Float>>();
+
+        listBox.getItems().addAll(currentCities);
 
         bottomMenu.setActionHandler(this);
 	}
@@ -67,5 +74,23 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
 
     @Override
     public void onSearchClick() { System.out.println("Already on Search!"); }
+
+    private void searchArray(String searchFor) {
+        currentCities.clear();
+        coordinates.clear();
+
+        searchFor = searchFor.toLowerCase();
+
+        for (City c : JavaFX.Cities) {
+            String check = c.city.toLowerCase();
+            if (searchFor.length() > check.length()) {
+                continue;
+            }
+            if (check.contains(searchFor)) {
+                currentCities.add(c.city);
+                coordinates.add(new Pair<>(c.latitude, c.longitude));
+            }
+        }
+    }
 
 }
