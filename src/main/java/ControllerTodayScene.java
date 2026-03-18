@@ -50,27 +50,7 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
         mainTemp.setText(String.valueOf(JavaFX.today.temp));
         mainWindSpeedLow.setText(JavaFX.today.windLow);
         mainWindDir.setText(JavaFX.today.windDir);
-        // Not sure why
         mainPrecip.setText(JavaFX.today.precip + "%");
-
-        /*
-        String[] windLex = JavaFX.forecast.get(0).windSpeed.split(" ");
-        if (windLex.length > 2) {
-            mainWindSpeedHigh.setText(windLex[2]);
-        }
-        else {
-            mainWindSpeedHigh.setVisible(false);
-            basicTO.setVisible(false);
-            mainWindSpeedLow.setLayoutY(30);
-            basicMPH.setLayoutY(50);
-        }
-
-        tempDesc.setText(JavaFX.forecast.get(0).shortForecast);
-        mainTemp.setText(String.valueOf(JavaFX.forecast.get(0).temperature));
-        mainWindSpeedLow.setText(windLex[0]);
-        mainWindDir.setText(JavaFX.forecast.get(0).windDirection);
-        mainPrecip.setText(JavaFX.forecast.get(0).probabilityOfPrecipitation.value + "%");
-         */
 
         bottomMenu.setActionHandler(this);
     }
