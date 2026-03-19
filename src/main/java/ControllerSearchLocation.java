@@ -15,7 +15,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
 import javafx.scene.Parent;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Pair;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 
 public class ControllerSearchLocation implements Initializable, MenuActionHandler {
 	// FXML elements
@@ -36,6 +39,13 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
         searchArray(searchBar.getText());
         listBox.getItems().addAll(currentCities);
         searchBar.clear();
+    }
+
+    @FXML
+    private void collectResult(MouseEvent e){
+        // get object selected in listview for each selection
+        String result = listBox.getSelectionModel().getSelectedItem();
+        
     }
 
     // variables for control - could this be a map instead?

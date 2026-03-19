@@ -10,9 +10,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
 
-<Pane fx:id="rootSearch" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304c89;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerSearchLocation">
+<Pane fx:id="rootSearch" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" stylesheets="@../Other/locationStyles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerSearchLocation">
    <children>
       <MenuComponent fx:id="bottomMenu" searchOn="false" />
       <ImageView fitHeight="288.0" fitWidth="297.0" layoutX="56.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
@@ -20,10 +19,7 @@
             <Image url="@../Images/globe.png" />
          </image>
       </ImageView>
-      <TextField fx:id="searchBar" layoutX="16.0" layoutY="151.0" prefHeight="65.0" prefWidth="369.0" promptText="Search location for weather here..." style="-fx-background-color: #9EB7E5; -fx-background-radius: 45; -fx-text-fill: #000000; -fx-prompt-text-fill: #000000;">
-         <font>
-            <Font name="Century Gothic" size="16.0" />
-         </font>
+      <TextField fx:id="searchBar" layoutX="16.0" layoutY="151.0" prefHeight="65.0" prefWidth="369.0" promptText="Search location for weather here...">
          <effect>
             <DropShadow blurType="TWO_PASS_BOX" offsetX="2.0" offsetY="3.0">
                <color>
@@ -31,13 +27,20 @@
                </color></DropShadow>
          </effect>
       </TextField>
-      <ListView fx:id="listBox" layoutX="25.0" layoutY="330.0" prefHeight="330.0" prefWidth="350.0" style="-fx-background-color: #9EB7E5; -fx-control-inner-background: #9EB7E5;" />
+      <ListView fx:id="listBox" layoutX="25.0" layoutY="330.0" onMouseClicked="#collectResult" prefHeight="330.0" prefWidth="350.0" />
       <ImageView fitHeight="150.0" fitWidth="50.0" layoutX="319.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/searchGlass.png" />
          </image>
       </ImageView>
-      <Button fx:id="searchButton" layoutX="318.0" layoutY="157.0" mnemonicParsing="false" onAction="#search" opacity="0.0" prefHeight="50.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="searchButton" layoutX="318.0" layoutY="158.0" mnemonicParsing="false" onAction="#search" prefHeight="50.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/returnKey.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
    </children>
    <padding>
       <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
