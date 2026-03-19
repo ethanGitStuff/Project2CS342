@@ -46,14 +46,6 @@
             <DropShadow blurType="TWO_PASS_BOX" color="#000000bf" height="25.0" offsetX="2.0" offsetY="3.0" radius="12.0" width="25.0" />
          </effect>
       </Pane>
-      <Button fx:id="alertsButton" layoutX="21.0" layoutY="603.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="358.0" text="Weather Alerts">
-         <effect>
-            <DropShadow offsetX="2.0" offsetY="3.0">
-               <color>
-                  <Color opacity="0.75" />
-               </color></DropShadow>
-         </effect>
-      </Button>
       <Button fx:id="favoritesButton" layoutX="21.0" layoutY="536.0" mnemonicParsing="false" onAction="#onFavoritesClick" prefHeight="50.0" prefWidth="358.0" text="Favorites">
          <effect>
             <DropShadow offsetX="2.0" offsetY="3.0">
