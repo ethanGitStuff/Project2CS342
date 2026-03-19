@@ -43,6 +43,7 @@ public class JavaFX extends Application {
 			throw new RuntimeException("City file could not be opened."); // basic error handling
 		}
 		Cities = mapper.readValue(json, new TypeReference<ArrayList<City>>() {});
+		favorites.add(new City("Chicago", 41.8826f, -87.6234f));
 
 		setForecastOfDays();
 		loadFonts();
