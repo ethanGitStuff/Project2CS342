@@ -3,16 +3,22 @@ package com.custom.classes;
 import weather.Period;
 
 public class Day {
+    // The data we need stored within each forecast-Period
     public String name;
     public String desc;
     public int temp;
     public int precip;
+
+    // Wind is separated out because it doesn't always provide
+    // two separate wind speeds in the period.
     public String windHigh;
     public String windLow;
     public String windDir;
     public boolean windRange;
 
     public Day(Period now) {
+
+        // Here is how the wind is parsed
         String[] windArr = now.windSpeed.split(" ");
         if (windArr.length > 2) {
             windRange = true;

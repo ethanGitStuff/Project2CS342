@@ -29,7 +29,7 @@ public class JavaFX extends Application {
 	public static DayPair dayTwo;
 	public static DayPair dayThree;
 
-	public static ArrayList<String> favorites = new ArrayList<>();
+	public static ArrayList<City> favorites = new ArrayList<>();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -44,19 +44,7 @@ public class JavaFX extends Application {
 		}
 		Cities = mapper.readValue(json, new TypeReference<ArrayList<City>>() {});
 
-		// pull data from forecast ArrayList to be used in displaying three-day forecast tab
-		today = new Day(forecast.get(0));
-
-		if (forecast.get(1).name.equals("Tonight")) {
-			dayOne = new DayPair(forecast.get(2), forecast.get(3));
-			dayTwo = new DayPair(forecast.get(4), forecast.get(5));
-			dayThree = new DayPair(forecast.get(6), forecast.get(7));
-		}
-		else {
-			dayOne = new DayPair(forecast.get(1), forecast.get(2));
-			dayTwo = new DayPair(forecast.get(3), forecast.get(4));
-			dayThree = new DayPair(forecast.get(5), forecast.get(6));
-		}
+		setForecastOfDays();
 
 		primaryStage.setTitle("Weather");
 
@@ -69,5 +57,23 @@ public class JavaFX extends Application {
 		primaryStage.setResizable(false);
 		primaryStage.show();
 		rootDay.requestFocus();
+	}
+
+	public static void setForecastOfDays() {
+		// pull data from forecast ArrayList to be used in displaying three-day forecast tab
+		today = new Day(forecast.get(0));
+
+		// If it is already night, the forecast array is offset
+		// This corrects the offset for the multi-day forecast
+		if (forecast.get(1).name.equals("Tonight")) {
+			dayOne = new DayPair(forecast.get(2), forecast.get(3));
+			dayTwo = new DayPair(forecast.get(4), forecast.get(5));
+			dayThree = new DayPair(forecast.get(6), forecast.get(7));
+		}
+		else {
+			dayOne = new DayPair(forecast.get(1), forecast.get(2));
+			dayTwo = new DayPair(forecast.get(3), forecast.get(4));
+			dayThree = new DayPair(forecast.get(5), forecast.get(6));
+		}
 	}
 }

@@ -29,8 +29,10 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
     @FXML private TextField basicTO;
     @FXML private TextField basicMPH;
     @FXML private Button favoritesButton;
+    @FXML private TextField currLocat;
     @FXML private MenuComponent bottomMenu;
 
+    public static String currentLocation = "Chicago";
 
 
     @Override
@@ -39,6 +41,8 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
         if (JavaFX.forecast == null){
             throw new RuntimeException("Forecast did not load");
         }
+
+        currLocat.setText(currentLocation);
 
         // handle and set wind range output
         if (JavaFX.today.windRange) {

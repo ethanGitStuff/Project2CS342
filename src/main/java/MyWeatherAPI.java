@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class MyWeatherAPI extends WeatherAPI {
 
-    public ArrayList<String> getRegion(float lat, float lon) throws NullPointerException {
+    public static ArrayList<String> getRegion(float lat, float lon) throws NullPointerException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://api.weather.gov/points/"+String.valueOf(lat)+","+String.valueOf(lon)))
                 .build();

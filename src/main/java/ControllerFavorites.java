@@ -1,3 +1,4 @@
+import com.custom.classes.City;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -5,6 +6,7 @@ import java.util.ResourceBundle;
 
 import com.custom.components.MenuActionHandler;
 import com.custom.components.MenuComponent;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,16 +16,22 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
 import javafx.scene.Parent;
+import javafx.util.Duration;
+import weather.Period;
+import weather.WeatherAPI;
 
 public class ControllerFavorites implements Initializable, MenuActionHandler {
 
     @FXML private Pane root;
-    @FXML private Pane chaoicePane;
+    @FXML private Pane choicePane;
     @FXML private MenuComponent bottomMenu;
 
     @FXML private TextField cityNameField;
     @FXML private TextField latField;
     @FXML private TextField longField;
+    @FXML private TextField currentField;
+    @FXML private TextField badLocation;
+    @FXML private TextField badInput;
 
     @FXML private ListView<String> favListView;
 
@@ -31,32 +39,126 @@ public class ControllerFavorites implements Initializable, MenuActionHandler {
     @FXML private Button selectButton;
     @FXML private Button deleteButton;
 
+    private City currentCity;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        favListView.getItems().addAll(JavaFX.favorites);
+        for (City c : JavaFX.favorites) {
+            favListView.getItems().add(c.city + " | " + c.latitude + " | " + c.longitude);
+        }
+
+        favListView.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldText, newText) -> {
+                    if (newText != null) { onSelect(newText); }
+                    else {hideChoice();}
+                }
+        );
+
         bottomMenu.setActionHandler(this);
     }
 
     public void onAddClick(ActionEvent e) {
+        float lat;
+        float lon;
+
+        if (favListView.getItems().size() >= 14) {
+            badInput.setText("Too Many");
+            badText(badInput);
+            badInput.setText("Not a valid input");
+            return;
+        }
         if (cityNameField.getText().isEmpty() || latField.getText().isEmpty() || longField.getText().isEmpty()) {
+            badText(badInput);
+            return;
+        }
+        if (cityNameField.getText().contains("|")) {
+            badText(badInput);
             return;
         }
         try {
-            Float.parseFloat(latField.getText());
-            Float.parseFloat(longField.getText());
+            lat = Float.parseFloat(latField.getText());
+            lon = Float.parseFloat(longField.getText());
         }
         catch (NumberFormatException n) {
+            badText(badInput);
             return;
         }
 
-        String toAdd = cityNameField.getText() + " | " + latField.getText() + " | " + longField.getText();
-        JavaFX.favorites.add(toAdd);
-        favListView.getItems().clear();
-        favListView.getItems().addAll(JavaFX.favorites);
+        for (City c : JavaFX.favorites) {
+            if (cityNameField.getText().equals(c.city)) {
+                badText(badInput);
+                return;
+            }
+            if (lat == c.latitude && lon == c.longitude) {
+                badText(badInput);
+                return;
+            }
+        }
+
+        City toAddCity = new City(cityNameField.getText(), lat, lon);
+        String toAddString = cityNameField.getText() + " | " + latField.getText() + " | " + longField.getText();
+
+        JavaFX.favorites.add(toAddCity);
+        favListView.getItems().add(toAddString);
 
         cityNameField.clear();
         latField.clear();
         longField.clear();
+    }
+
+    public void onSelect(String curr) {
+        String fixed = curr.split("\\|")[0].trim();
+
+        for (City c : JavaFX.favorites) {
+            if (c.city.equals(fixed)) {
+                currentCity = new City(c.city, c.latitude, c.longitude);
+            }
+        }
+        currentField.setText(curr);
+        choicePane.setDisable(false);
+        choicePane.setVisible(true);
+    }
+
+    public void hideChoice() {
+        choicePane.setDisable(true);
+        choicePane.setVisible(false);
+    }
+
+    public void deleteClick(ActionEvent e) {
+        int index = favListView.getSelectionModel().getSelectedIndex();
+        String cityToDelete = currentCity.city;
+        favListView.getItems().remove(index);
+        JavaFX.favorites.removeIf(c -> cityToDelete.equals(c.city));
+        favListView.getSelectionModel().clearSelection();
+        currentCity = null;
+    }
+
+    public void onSelectButtonClick(ActionEvent e) {
+        ArrayList<String> cityDetails = MyWeatherAPI.getRegion(currentCity.latitude, currentCity.longitude);
+        if (cityDetails.get(0).isEmpty()) {
+            badText(badLocation);
+            return;
+        }
+
+        ArrayList<Period> newForecast = WeatherAPI.getForecast(
+                cityDetails.get(0), Integer.parseInt(cityDetails.get(1)), Integer.parseInt(cityDetails.get(2)));
+        if (newForecast == null) {
+            badText(badLocation);
+            return;
+        }
+
+        JavaFX.forecast = newForecast;
+        JavaFX.setForecastOfDays();
+        ControllerTodayScene.currentLocation = currentCity.city;
+        onHomeClick();
+    }
+
+    private void badText(TextField bad) {
+        bad.setVisible(true);
+        PauseTransition pause = new PauseTransition(Duration.seconds(2));
+        pause.setOnFinished(x -> bad.setVisible(false));
+        pause.play();
     }
 
     @Override
