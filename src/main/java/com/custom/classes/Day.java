@@ -32,7 +32,7 @@ public class Day {
         }
 
         this.name = now.name;
-        this.desc = now.shortForecast;
+        this.desc = now.shortForecast.trim();
         this.temp = now.temperature;
         this.precip = now.probabilityOfPrecipitation.value;
         this.windDir = now.windDirection;

@@ -12,7 +12,6 @@ import weather.WeatherAPI;
 
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.io.File;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 

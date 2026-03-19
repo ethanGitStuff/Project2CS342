@@ -55,6 +55,8 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
     @FXML private TextField zoomWindSpeedNight;
     @FXML private TextField zoomWindDirNight;
     @FXML private TextField zoomPrecipNight;
+    @FXML private TextField dayDesc;
+    @FXML private TextField nightDesc;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -64,28 +66,28 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
         }
         
         // using data parsed from API request, set textfields with information on day 1 card
-        dayOneDay.setText(String.valueOf(JavaFX.dayOne.day.temp));
+        dayOneDay.setText(String.valueOf(JavaFX.dayOne.day.temp) + "°F");
         dayOneWind.setText(JavaFX.dayOne.day.windHigh);
         dayOneWindDir.setText(JavaFX.dayOne.day.windDir);
-        dayOneNight.setText(String.valueOf(JavaFX.dayOne.night.temp));
+        dayOneNight.setText(String.valueOf(JavaFX.dayOne.night.temp) + "°F");
         nightOneWind.setText(JavaFX.dayOne.night.windHigh);
         nightOneWindDir.setText(JavaFX.dayOne.night.windDir);
         dayOneText.setText(JavaFX.dayOne.day.name);
 
         // using data parsed from API request, set textfields with information on day 2 card
-        dayTwoDay.setText(String.valueOf(JavaFX.dayTwo.day.temp));
+        dayTwoDay.setText(String.valueOf(JavaFX.dayTwo.day.temp) + "°F");
         dayTwoWind.setText(JavaFX.dayTwo.day.windHigh);
         dayTwoWindDir.setText(JavaFX.dayTwo.day.windDir);
-        dayTwoNight.setText(String.valueOf(JavaFX.dayTwo.night.temp));
+        dayTwoNight.setText(String.valueOf(JavaFX.dayTwo.night.temp) + "°F");
         nightTwoWind.setText(JavaFX.dayTwo.night.windHigh);
         nightTwoWindDir.setText(JavaFX.dayTwo.night.windDir);
         dayTwoText.setText(JavaFX.dayTwo.day.name);
 
         // using data parsed from API request, set textfields with information on day 3 card
-        dayThreeDay.setText(String.valueOf(JavaFX.dayThree.day.temp));
+        dayThreeDay.setText(String.valueOf(JavaFX.dayThree.day.temp) + "°F");
         dayThreeWind.setText(JavaFX.dayThree.day.windHigh);
         dayThreeWindDir.setText(JavaFX.dayThree.day.windDir);
-        dayThreeNight.setText(String.valueOf(JavaFX.dayThree.night.temp));
+        dayThreeNight.setText(String.valueOf(JavaFX.dayThree.night.temp) + "°F");
         nightThreeWind.setText(JavaFX.dayThree.night.windHigh);
         nightThreeWindDir.setText(JavaFX.dayThree.night.windDir);
         dayThreeText.setText(JavaFX.dayThree.day.name);
@@ -97,15 +99,18 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
         zoomPane.setDisable(false);
         zoomPane.setVisible(true);
 
-        zoomDayTemp.setText(String.valueOf(JavaFX.dayOne.day.temp));
+        zoomDayTemp.setText(String.valueOf(JavaFX.dayOne.day.temp) + "°F");
         zoomWindSpeedDay.setText(JavaFX.dayOne.day.windHigh);
         zoomWindDirDay.setText(JavaFX.dayOne.day.windDir);
         zoomPrecipDay.setText(String.valueOf(JavaFX.dayOne.day.precip) + "%");
 
-        zoomNightTemp.setText(String.valueOf(JavaFX.dayOne.night.temp));
+        zoomNightTemp.setText(String.valueOf(JavaFX.dayOne.night.temp) + "°F");
         zoomWindSpeedNight.setText(JavaFX.dayOne.night.windHigh);
         zoomWindDirNight.setText(JavaFX.dayOne.night.windDir);
         zoomPrecipNight.setText(JavaFX.dayOne.night.precip + "%");
+
+        dayDesc.setText(JavaFX.dayOne.day.desc);
+        nightDesc.setText(JavaFX.dayOne.night.desc);
 
         dayOneZoom.setDisable(true);
         dayTwoZoom.setDisable(true);
@@ -116,15 +121,18 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
         zoomPane.setDisable(false);
         zoomPane.setVisible(true);
 
-        zoomDayTemp.setText(String.valueOf(JavaFX.dayTwo.day.temp));
+        zoomDayTemp.setText(String.valueOf(JavaFX.dayTwo.day.temp) + "°F");
         zoomWindSpeedDay.setText(JavaFX.dayTwo.day.windHigh);
         zoomWindDirDay.setText(JavaFX.dayTwo.day.windDir);
         zoomPrecipDay.setText(JavaFX.dayTwo.day.precip + "%");
 
-        zoomNightTemp.setText(String.valueOf(JavaFX.dayTwo.night.temp));
+        zoomNightTemp.setText(String.valueOf(JavaFX.dayTwo.night.temp) + "°F");
         zoomWindSpeedNight.setText(JavaFX.dayTwo.night.windHigh);
         zoomWindDirNight.setText(JavaFX.dayTwo.night.windDir);
         zoomPrecipNight.setText(JavaFX.dayTwo.night.precip + "%");
+
+        dayDesc.setText(JavaFX.dayTwo.day.desc);
+        nightDesc.setText(JavaFX.dayTwo.night.desc);
 
         dayOneZoom.setDisable(true);
         dayTwoZoom.setDisable(true);
@@ -135,15 +143,18 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
         zoomPane.setDisable(false);
         zoomPane.setVisible(true);
 
-        zoomDayTemp.setText(String.valueOf(JavaFX.dayThree.day.temp));
+        zoomDayTemp.setText(String.valueOf(JavaFX.dayThree.day.temp) + "°F");
         zoomWindSpeedDay.setText(JavaFX.dayThree.day.windHigh);
         zoomWindDirDay.setText(JavaFX.dayThree.day.windDir);
         zoomPrecipDay.setText(JavaFX.dayThree.day.precip + "%");
 
-        zoomNightTemp.setText(String.valueOf(JavaFX.dayThree.night.temp));
+        zoomNightTemp.setText(String.valueOf(JavaFX.dayThree.night.temp)+ "°F");
         zoomWindSpeedNight.setText(JavaFX.dayThree.night.windHigh);
         zoomWindDirNight.setText(JavaFX.dayThree.night.windDir);
         zoomPrecipNight.setText(JavaFX.dayThree.night.precip + "%");
+
+        dayDesc.setText(JavaFX.dayThree.day.desc);
+        nightDesc.setText(JavaFX.dayThree.night.desc);
 
         dayOneZoom.setDisable(true);
         dayTwoZoom.setDisable(true);

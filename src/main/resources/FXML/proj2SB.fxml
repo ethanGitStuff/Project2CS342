@@ -10,11 +10,11 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="rootDay" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304c89;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerTodayScene">
+<Pane fx:id="rootDay" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304c89;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerTodayScene">
    <children>
       <Pane fx:id="bubble" layoutX="12.0" layoutY="-20.0" maxWidth="375.0" minWidth="375.0" prefHeight="430.0" prefWidth="375.0" style="-fx-background-color: #648de5; -fx-background-radius: 45;" translateY="40.0">
          <children>
-            <TextField fx:id="mainTemp" alignment="CENTER" editable="false" layoutX="127.0" layoutY="51.0" maxHeight="100.0" maxWidth="150.0" minHeight="75.0" minWidth="122.0" prefHeight="75.0" prefWidth="122.0" promptText="Loading..." scaleX="3.0" scaleY="3.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="67">
+            <TextField fx:id="mainTemp" alignment="CENTER" editable="false" layoutX="98.0" layoutY="49.0" maxHeight="100.0" maxWidth="180.0" minHeight="75.0" minWidth="122.0" prefHeight="75.0" prefWidth="180.0" promptText="Loading..." scaleX="3.0" scaleY="3.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="67°F">
                <font>
                   <Font name="Lucida Bright Demibold" size="50.0" />
                </font>
@@ -98,7 +98,7 @@
                </color></DropShadow>
          </effect>
       </Button>
-      <Button fx:id="favoritesButton" onAction="#onFavoritesClick" layoutX="21.0" layoutY="536.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;" text="Favorites" textFill="#e8e5da">
+      <Button fx:id="favoritesButton" layoutX="21.0" layoutY="536.0" mnemonicParsing="false" onAction="#onFavoritesClick" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;" text="Favorites" textFill="#e8e5da">
          <font>
             <Font name="Century Gothic" size="20.0" />
          </font>

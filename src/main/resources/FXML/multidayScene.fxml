@@ -38,7 +38,7 @@
                         <Pane maxHeight="160.0" minHeight="160.0" minWidth="188.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                            <children>
                               <Pane layoutX="138.0" maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #9EB7E5;" />
-                              <TextField fx:id="dayOneDay" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                              <TextField fx:id="dayOneDay" editable="false" layoutX="25.0" layoutY="14.0" maxHeight="80.0" maxWidth="140.0" minHeight="80.0" minWidth="140.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00°F">
                                  <font>
                                     <Font size="45.0" />
                                  </font>
@@ -87,7 +87,7 @@
                         <Pane maxHeight="160.0" minHeight="160.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
                            <children>
                               <Pane maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #648DE5;" />
-                              <TextField fx:id="dayOneNight" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                              <TextField fx:id="dayOneNight" editable="false" layoutX="25.0" layoutY="14.0" maxHeight="80.0" maxWidth="140.0" minHeight="80.0" minWidth="140.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00°F">
                                  <font>
                                     <Font size="45.0" />
                                  </font>
@@ -167,7 +167,7 @@
                         <Pane maxHeight="160.0" minHeight="160.0" minWidth="188.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                            <children>
                               <Pane layoutX="138.0" maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #9EB7E5;" />
-                              <TextField fx:id="dayTwoDay" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                              <TextField fx:id="dayTwoDay" editable="false" layoutX="25.0" layoutY="14.0" maxHeight="80.0" maxWidth="140.0" minHeight="80.0" minWidth="140.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00°F">
                                  <font>
                                     <Font size="45.0" />
                                  </font>
@@ -216,7 +216,7 @@
                         <Pane maxHeight="160.0" minHeight="160.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
                            <children>
                               <Pane maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #648DE5;" />
-                              <TextField fx:id="dayTwoNight" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                              <TextField fx:id="dayTwoNight" editable="false" layoutX="25.0" layoutY="14.0" maxHeight="80.0" maxWidth="140.0" minHeight="80.0" minWidth="140.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00°F">
                                  <font>
                                     <Font size="45.0" />
                                  </font>
@@ -296,7 +296,7 @@
                         <Pane maxHeight="160.0" minHeight="160.0" minWidth="188.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;">
                            <children>
                               <Pane layoutX="138.0" maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #9EB7E5;" />
-                              <TextField fx:id="dayThreeDay" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                              <TextField fx:id="dayThreeDay" editable="false" layoutX="25.0" layoutY="14.0" maxHeight="80.0" maxWidth="140.0" minHeight="80.0" minWidth="140.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00°F">
                                  <font>
                                     <Font size="45.0" />
                                  </font>
@@ -345,7 +345,7 @@
                         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
                            <children>
                               <Pane maxHeight="160.0" maxWidth="50.0" minHeight="160.0" minWidth="50.0" prefHeight="160.0" prefWidth="50.0" style="-fx-background-color: #648DE5;" />
-                              <TextField fx:id="dayThreeNight" editable="false" layoutX="44.0" layoutY="14.0" maxHeight="80.0" maxWidth="100.0" minHeight="80.0" minWidth="100.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                              <TextField fx:id="dayThreeNight" editable="false" layoutX="25.0" layoutY="14.0" maxHeight="80.0" maxWidth="140.0" minHeight="80.0" minWidth="140.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00°F">
                                  <font>
                                     <Font size="45.0" />
                                  </font>
@@ -420,7 +420,7 @@
                               <Font name="Century Gothic Bold" size="34.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="zoomDayTemp" alignment="CENTER" editable="false" layoutX="90.0" layoutY="79.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                        <TextField fx:id="zoomDayTemp" alignment="CENTER" editable="false" layoutX="90.0" layoutY="50.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
                            <font>
                               <Font name="Century Gothic Bold" size="45.0" />
                            </font>
@@ -486,6 +486,11 @@
                               <Font name="Century Gothic Bold" size="23.0" />
                            </font>
                         </Button>
+                        <TextField fx:id="dayDesc" alignment="CENTER" editable="false" layoutX="20.0" layoutY="150.0" prefWidth="340.0" style="-fx-text-fill: white; -fx-background-color: transparent;" text="California Rasins">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </TextField>
                      </children>
                   </Pane>
                   <Pane prefHeight="328.0" prefWidth="380.0" style="-fx-background-color: #648DE5; -fx-background-radius: 45;">
@@ -496,7 +501,7 @@
                               <Font name="Century Gothic Bold" size="34.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="zoomNightTemp" alignment="CENTER" editable="false" layoutX="90.0" layoutY="30.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
+                        <TextField fx:id="zoomNightTemp" alignment="CENTER" editable="false" layoutX="90.0" layoutY="-10.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="00">
                            <font>
                               <Font name="Century Gothic Bold" size="45.0" />
                            </font>
@@ -557,6 +562,11 @@
                               </TextField>
                            </children>
                         </Pane>
+                        <TextField fx:id="nightDesc" alignment="CENTER" editable="false" layoutX="20.0" layoutY="90.0" prefWidth="340.0" style="-fx-text-fill: white; -fx-background-color: transparent;" text="California Rasins">
+                           <font>
+                              <Font name="Century Gothic" size="14.0" />
+                           </font>
+                        </TextField>
                      </children>
                   </Pane>
                </children>
@@ -570,8 +580,8 @@
             </VBox>
          </children>
       </Pane>
-      <Button fx:id="dayOneZoom" layoutX="10.0" mnemonicParsing="false" onAction="#onDayOneClick" opacity="0.0" prefHeight="160.0" prefWidth="380.0" text="Button" translateY="60.0" />
-      <Button fx:id="dayTwoZoom" layoutX="10.0" layoutY="280.0" mnemonicParsing="false" onAction="#onDayTwoClick" opacity="0.0" prefHeight="160.0" prefWidth="380.0" text="Button" />
-      <Button fx:id="dayThreeZoom" layoutX="10.0" layoutY="500.0" mnemonicParsing="false" onAction="#onDayThreeClick" opacity="0.0" prefHeight="160.0" prefWidth="380.0" text="Button" />
+      <Button fx:id="dayOneZoom" layoutX="10.0" layoutY="-48.0" mnemonicParsing="false" onAction="#onDayOneClick" opacity="0.0" prefHeight="208.0" prefWidth="380.0" text="Button" translateY="60.0" />
+      <Button fx:id="dayTwoZoom" layoutX="10.0" layoutY="232.0" mnemonicParsing="false" onAction="#onDayTwoClick" opacity="0.0" prefHeight="208.0" prefWidth="380.0" text="Button" />
+      <Button fx:id="dayThreeZoom" layoutX="10.0" layoutY="452.0" mnemonicParsing="false" onAction="#onDayThreeClick" opacity="0.0" prefHeight="208.0" prefWidth="380.0" text="Button" />
    </children>
 </Pane>
