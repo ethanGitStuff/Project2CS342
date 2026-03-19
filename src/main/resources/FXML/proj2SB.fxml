@@ -8,76 +8,35 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
 
-<Pane fx:id="rootDay" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #304c89;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerTodayScene">
+<Pane fx:id="rootDay" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" stylesheets="@../Other/homeStyles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerTodayScene">
    <children>
-      <Pane fx:id="bubble" layoutX="12.0" layoutY="-20.0" maxWidth="375.0" minWidth="375.0" prefHeight="430.0" prefWidth="375.0" style="-fx-background-color: #648de5; -fx-background-radius: 45;" translateY="40.0">
+      <Pane fx:id="bubble" layoutX="12.0" layoutY="-20.0" maxWidth="375.0" minWidth="375.0" prefHeight="430.0" prefWidth="375.0" translateY="40.0">
          <children>
-            <TextField fx:id="mainTemp" alignment="CENTER" editable="false" layoutX="98.0" layoutY="49.0" maxHeight="100.0" maxWidth="180.0" minHeight="75.0" minWidth="122.0" prefHeight="75.0" prefWidth="180.0" promptText="Loading..." scaleX="3.0" scaleY="3.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="67°F">
-               <font>
-                  <Font name="Lucida Bright Demibold" size="50.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="foreDesc" alignment="CENTER" editable="false" layoutX="9.0" layoutY="161.0" prefHeight="75.0" prefWidth="358.0" promptText="Loading..." style="-fx-background-color: transparent; -fx-text-fill: white;" text="why is everything 67 :(">
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-            </TextField>
-            <Pane layoutX="211.0" layoutY="252.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: CDCDEB; -fx-background-radius: 45;">
+            <TextField fx:id="mainTemp" alignment="CENTER" editable="false" layoutX="98.0" layoutY="49.0" maxHeight="100.0" maxWidth="180.0" minHeight="75.0" minWidth="122.0" prefHeight="75.0" prefWidth="180.0" promptText="Loading..." scaleX="3.0" scaleY="3.0" text="67°F"> </TextField>
+            <TextField fx:id="foreDesc" alignment="CENTER" editable="false" layoutX="9.0" layoutY="161.0" prefHeight="75.0" prefWidth="358.0" promptText="Loading..." text="why is everything 67 :("> </TextField>
+            <Pane fx:id="precipPane" layoutX="211.0" layoutY="252.0" prefHeight="100.0" prefWidth="150.0">
                <children>
-                  <TextField fx:id="basicCHANCE" alignment="CENTER" editable="false" layoutX="-15.0" layoutY="55.0" scaleY="0.75" style="-fx-background-color: transparent; -fx-text-fill: #6A6CC4;" text="Chance of">
-                     <font>
-                        <Font name="Century Gothic Bold" size="15.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="basicPRECIP" alignment="CENTER" editable="false" layoutX="-15.0" layoutY="70.0" scaleY="0.75" style="-fx-background-color: transparent; -fx-text-fill: #6A6CC4;" text="Precipitation">
-                     <font>
-                        <Font name="Century Gothic Bold" size="15.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="mainPrecip" alignment="CENTER" editable="false" layoutX="-15.0" layoutY="20.0" scaleX="3.0" scaleY="3.0" style="-fx-background-color: transparent; -fx-text-fill: #6A6CC4;" text="67%">
-                     <font>
-                        <Font name="Century Gothic Bold" size="15.0" />
-                     </font>
-                  </TextField>
+                  <TextField fx:id="basicCHANCE" alignment="CENTER" editable="false" layoutX="-15.0" layoutY="55.0" scaleY="0.75" text="Chance of"> </TextField>
+                  <TextField fx:id="basicPRECIP" alignment="CENTER" editable="false" layoutX="-15.0" layoutY="70.0" scaleY="0.75" text="Precipitation"> </TextField>
+                  <TextField fx:id="mainPrecip" alignment="CENTER" editable="false" layoutX="-15.0" layoutY="20.0" scaleX="3.0" scaleY="3.0" text="67%"> </TextField>
                </children>
             </Pane>
-            <HBox layoutX="14.0" layoutY="252.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-radius: 45;">
+            <HBox fx:id="windBox" layoutX="14.0" layoutY="252.0" prefHeight="100.0" prefWidth="150.0">
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: E8E5DA; -fx-background-radius: 45;">
+                  <Pane fx:id="windPane" prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Pane layoutX="36.0" prefHeight="100.0" prefWidth="40.0" style="-fx-background-color: E8E5DA;" />
-                        <TextField fx:id="mainWindSpeedLow" alignment="CENTER" editable="false" layoutX="-50.0" layoutY="10.0" scaleX="2.0" scaleY="2.0" style="-fx-background-color: transparent; -fx-text-fill: CDC392;" text="67">
-                           <font>
-                              <Font name="Century Gothic Bold" size="15.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="mainWindSpeedHigh" alignment="CENTER" editable="false" layoutX="-50.0" layoutY="50.0" scaleX="2.0" scaleY="2.0" style="-fx-background-color: transparent; -fx-text-fill: CDC392;" text="67">
-                           <font>
-                              <Font name="Century Gothic Bold" size="15.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="basicTO" alignment="CENTER" editable="false" layoutX="-50.0" layoutY="30.0" scaleX="0.85" scaleY="0.75" style="-fx-background-color: transparent; -fx-text-fill: CDC392;" text="to">
-                           <font>
-                              <Font name="Century Gothic Bold" size="15.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="basicMPH" alignment="CENTER" editable="false" layoutX="-50.0" layoutY="70.0" scaleX="0.85" scaleY="0.75" style="-fx-background-color: transparent; -fx-text-fill: CDC392;" text="MPH">
-                           <font>
-                              <Font name="Century Gothic Bold" size="15.0" />
-                           </font>
-                        </TextField>
+                        <Pane fx:id="innerWindPane" layoutX="36.0" prefHeight="100.0" prefWidth="40.0" />
+                        <TextField fx:id="mainWindSpeedLow" alignment="CENTER" editable="false" layoutX="-50.0" layoutY="10.0" scaleX="2.0" scaleY="2.0" text="67"> </TextField>
+                        <TextField fx:id="mainWindSpeedHigh" alignment="CENTER" editable="false" layoutX="-50.0" layoutY="50.0" scaleX="2.0" scaleY="2.0" text="67"> </TextField>
+                        <TextField fx:id="basicTO" alignment="CENTER" editable="false" layoutX="-50.0" layoutY="30.0" scaleX="0.85" scaleY="0.75" text="to"> </TextField>
+                        <TextField fx:id="basicMPH" alignment="CENTER" editable="false" layoutX="-50.0" layoutY="70.0" scaleX="0.85" scaleY="0.75" text="MPH"> </TextField>
                      </children>
                   </Pane>
-                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: CDC392; -fx-background-radius: 45;">
+                  <Pane fx:id="windDirPane" prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Pane prefHeight="100.0" prefWidth="40.0" style="-fx-background-color: CDC392;" />
-                        <TextField fx:id="mainWindDir" alignment="CENTER" editable="false" layoutX="-43.0" layoutY="35.0" scaleX="2.0" scaleY="2.0" style="-fx-background-color: transparent; -fx-text-fill: E8E5DA;" text="Dir">
-                           <font>
-                              <Font name="Century Gothic Bold" size="13.0" />
-                           </font>
-                        </TextField>
+                        <Pane fx:id="innerWindDirPane" prefHeight="100.0" prefWidth="40.0" />
+                        <TextField fx:id="mainWindDir" alignment="CENTER" editable="false" layoutX="-43.0" layoutY="35.0" scaleX="2.0" scaleY="2.0" text="Dir"> </TextField>
                      </children>
                   </Pane>
                </children>
@@ -87,10 +46,7 @@
             <DropShadow blurType="TWO_PASS_BOX" color="#000000bf" height="25.0" offsetX="2.0" offsetY="3.0" radius="12.0" width="25.0" />
          </effect>
       </Pane>
-      <Button fx:id="alertsButton" layoutX="21.0" layoutY="603.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;" text="Weather Alerts" textFill="#e8e5da">
-         <font>
-            <Font name="Century Gothic" size="20.0" />
-         </font>
+      <Button fx:id="alertsButton" layoutX="21.0" layoutY="603.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="358.0" text="Weather Alerts">
          <effect>
             <DropShadow offsetX="2.0" offsetY="3.0">
                <color>
@@ -98,10 +54,7 @@
                </color></DropShadow>
          </effect>
       </Button>
-      <Button fx:id="favoritesButton" layoutX="21.0" layoutY="536.0" mnemonicParsing="false" onAction="#onFavoritesClick" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-background-radius: 45;" text="Favorites" textFill="#e8e5da">
-         <font>
-            <Font name="Century Gothic" size="20.0" />
-         </font>
+      <Button fx:id="favoritesButton" layoutX="21.0" layoutY="536.0" mnemonicParsing="false" onAction="#onFavoritesClick" prefHeight="50.0" prefWidth="358.0" text="Favorites">
          <effect>
             <DropShadow offsetX="2.0" offsetY="3.0">
                <color>
@@ -109,10 +62,7 @@
                </color></DropShadow>
          </effect>
       </Button>
-      <TextField fx:id="currLocat" alignment="CENTER" editable="false" layoutX="21.0" layoutY="469.0" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #9EB7E5; -fx-text-fill: #E8E5DA; -fx-background-radius: 45;" text="Current Location">
-         <font>
-            <Font name="Century Gothic" size="20.0" />
-         </font>
+      <TextField fx:id="currLocat" alignment="CENTER" editable="false" layoutX="21.0" layoutY="469.0" prefHeight="50.0" prefWidth="358.0" text="Current Location">
          <effect>
             <DropShadow offsetX="2.0" offsetY="3.0">
                <color>

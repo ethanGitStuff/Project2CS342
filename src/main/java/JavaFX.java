@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import weather.Period;
 import weather.WeatherAPI;
@@ -44,6 +45,7 @@ public class JavaFX extends Application {
 		Cities = mapper.readValue(json, new TypeReference<ArrayList<City>>() {});
 
 		setForecastOfDays();
+		loadFonts();
 
 		primaryStage.setTitle("Weather");
 
@@ -58,6 +60,10 @@ public class JavaFX extends Application {
 		rootDay.requestFocus();
 	}
 
+	/*
+	 * Function to pull forecast data and set forecast pairs for display in GUI
+	 * Takes no parameters, returns no values
+	 */
 	public static void setForecastOfDays() {
 		// pull data from forecast ArrayList to be used in displaying three-day forecast tab
 		today = new Day(forecast.get(0));
@@ -73,6 +79,24 @@ public class JavaFX extends Application {
 			dayOne = new DayPair(forecast.get(1), forecast.get(2));
 			dayTwo = new DayPair(forecast.get(3), forecast.get(4));
 			dayThree = new DayPair(forecast.get(5), forecast.get(6));
+		}
+	}
+
+	/*
+	 * Loads custom fonts from downloaded TTF files in resources with basic error handling
+	 * Takes no parameters, returns no values
+	 */
+	public void loadFonts(){
+        // load custom fonts from ttf files
+        try {
+			InputStream stream = getClass().getResourceAsStream("/Other/LibreBodoni-VariableFont_wght.ttf");
+			if (stream != null) Font.loadFont(stream, 50);
+			else System.err.println("Libre Bodoni font file not found.");
+			InputStream stream2 = getClass().getResourceAsStream("/Other/IosevkaCharonMono-Medium.ttf");
+			if (stream != null) Font.loadFont(stream2, 15);
+			else System.err.println("Iosevka Charon font file not found.");
+		} catch(Exception e){
+			e.printStackTrace();
 		}
 	}
 }

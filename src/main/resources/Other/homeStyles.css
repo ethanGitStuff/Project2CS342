@@ -1,0 +1,130 @@
+#rootDay{
+    -fx-background-color: #304c89;
+    -fx-text-alignment: CENTER;
+}
+
+#bubble{
+    -fx-background-color: #648de5;
+    -fx-background-radius: 45;
+}
+
+#mainTemp{
+    -fx-font-family: "Libre Bodoni", "Lucida Bright Demibold", serif;
+    -fx-font-size: 45px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+#foreDesc{
+    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+#precipPane{
+    -fx-background-color: #CDCDEB;
+    -fx-background-radius: 45;
+}
+
+#basicCHANCE{
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #6A6CC4;
+}
+
+#basicPRECIP{
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #6A6CC4;
+}
+
+#mainPrecip{
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #6A6CC4;
+}
+
+#windBox{
+    -fx-background-radius: 45;
+}
+
+#windPane{
+    -fx-background-color: #E8E5DA;
+    -fx-background-radius: 45;
+}
+
+#innerWindPane{
+    -fx-background-color: #E8E5DA;
+}
+
+#mainWindSpeedLow{
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #CDC392;
+}
+
+#mainWindSpeedHigh{
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #CDC392;
+}
+
+#basicTO{
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #CDC392;
+}
+
+#basicMPH{
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #CDC392;
+}
+
+#windDirPane{
+    -fx-background-color: #CDC392;
+    -fx-background-radius: 45;
+}
+
+#innerWindDirPane{
+    -fx-background-color: #CDC392;
+}
+
+#mainWindDir{
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #E8E5DA;
+}
+
+#alertsButton{
+    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
+    -fx-font-size: 24px;
+    -fx-background-color: #9EB7E5;
+    -fx-background-radius: 45;
+    -fx-text-fill: white;
+}
+
+#favoritesButton{
+    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
+    -fx-font-size: 24px;
+    -fx-background-color: #9EB7E5;
+    -fx-background-radius: 45;
+    -fx-text-fill: white;
+}
+
+#currLocat{
+    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
+    -fx-font-size: 24px;
+    -fx-background-color: #9EB7E5;
+    -fx-background-radius: 45;
+    -fx-text-fill: white;
+}
