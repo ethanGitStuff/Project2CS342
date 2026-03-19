@@ -1,0 +1,161 @@
+#rootMultiDay, #zoomPane{
+    -fx-background-color: #304C89;
+}
+
+#pane1, #pane2, #paneE, #paneF, #paneR, #paneS, #pane14{
+    -fx-background-color: #9EB7E5;
+    -fx-background-radius: 45;
+}
+
+#dayOneText, #dayTwoText, #dayThreeText{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: "Libre Bodoni", "Lucida Bright Demibold", serif;
+    -fx-font-size: 20px;
+}
+
+#pane3, #paneG, #paneT, #pane15{
+    -fx-background-color: #9EB7E5;
+}
+
+#dayOneDay, #dayOneNight, #dayTwoDay, #dayTwoNight, #dayThreeDay, #dayThreeNight, #zoomDayTemp, #zoomNightTemp{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
+    -fx-font-size: 45px;
+}
+
+#pane4, #paneA, #paneH, #paneN, #paneU, #pane10, #pane16, #pane1D{
+    -fx-background-color: #CDC392;
+    -fx-background-radius: 45;
+}
+
+#pane5, #paneB, #paneI, #paneO, #paneV, #pane11, #pane17, #pane1E{
+    -fx-background-color: #CDC392;
+}
+
+#dayOneWind, #nightOneWind, #dayTwoWind, #nightTwoWind, #dayThreeWind, #nightThreeWind{
+    -fx-background-color: transparent;
+    -fx-text-fill: #E8E5DA;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 18px;
+}
+
+#upTo, #upTo2, #upTo3, #upTo4, #upTo5, #upTo6, #mph, #mph2, #mph3, #mph4, #mph5, #mph6{
+    -fx-background-color: transparent;
+    -fx-text-fill: #E8E5DA;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 10px;
+}
+
+#pane6, #paneC, #paneJ, #paneP, #paneW, #pane12, #pane18, #pane1F{
+    -fx-background-color: #E8E5DA;
+    -fx-background-radius: 45;
+}
+
+#pane7, #paneD, #paneK, #paneQ, #paneX, #pane13, #pane19, #pane1G{
+    -fx-background-color: #E8E5DA;
+}
+
+#dayOneWindDir, #nightOneWindDir, #dayTwoWindDir, #nightTwoWindDir, #dayThreeWindDir, #nightThreeWindDir{
+    -fx-background-color: transparent;
+    -fx-text-fill: #CDC392;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 18px;
+}
+
+#day1, #night1, #day2, #night2, #day3, #night3{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
+    -fx-font-size: 20px;
+}
+
+#pane8, #paneL, #paneY, #pane1B{
+    -fx-background-color: #648DE5;
+    -fx-background-radius: 45;
+}
+
+#pane9, #paneM, #paneZ, #pane1C{
+    -fx-background-color: #648DE5;
+}
+
+#day7, #night7{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
+    -fx-font-size: 34px;
+}
+
+#zoomWindSpeedDay, #zoomWindSpeedNight{
+    -fx-background-color: transparent;
+    -fx-text-fill: #E8E5DA;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 30px;
+}
+
+#mph7, #upTo7, #mph8, #upTo8{
+    -fx-background-color: transparent;
+    -fx-text-fill: #E8E5DA;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 14px;
+}
+
+#zoomWindDirDay, #zoomWindDirNight{
+    -fx-background-color: transparent;
+    -fx-text-fill: #CDC392;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 24px;
+}
+
+#pane1A{
+    -fx-background-color: #6A6CC4;
+    -fx-background-radius: 45;
+}
+
+#zoomPrecipDay{
+    -fx-background-color: transparent;
+    -fx-text-fill: #CDCDEB;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 25px;
+}
+
+#chanceOf, #precipLabel{
+    -fx-background-color: transparent;
+    -fx-text-fill: #CDCDEB;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 14px;
+}
+
+#exitZoom{
+    -fx-background-color: transparent;
+    -fx-text-fill: #304c89;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 23px;
+}
+
+#dayDesc, #nightDesc{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: "Century Gothic", sans-serif;
+    -fx-font-size: 14px;
+}
+
+#pane1H{
+    -fx-background-radius: 45;
+    -fx-background-color: #CDCDEB;
+}
+
+#zoomPrecipNight{
+    -fx-background-color: transparent;
+    -fx-text-fill: #6A6CC4;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 25px;
+}
+
+#chanceOf2, #precipLabel2{
+    -fx-background-color: transparent;
+    -fx-text-fill: #6A6CC4;
+    -fx-font-family: "Century Gothic Bold", sans-serif;
+    -fx-font-size: 14px;
+}

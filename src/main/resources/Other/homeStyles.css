@@ -27,21 +27,7 @@
     -fx-background-radius: 45;
 }
 
-#basicCHANCE{
-    -fx-font-family: "Century Gothic Bold", sans-serif;
-    -fx-font-size: 15px;
-    -fx-background-color: transparent;
-    -fx-text-fill: #6A6CC4;
-}
-
-#basicPRECIP{
-    -fx-font-family: "Century Gothic Bold", sans-serif;
-    -fx-font-size: 15px;
-    -fx-background-color: transparent;
-    -fx-text-fill: #6A6CC4;
-}
-
-#mainPrecip{
+#basicCHANCE, #basicPRECIP, #mainPrecip{
     -fx-font-family: "Century Gothic Bold", sans-serif;
     -fx-font-size: 15px;
     -fx-background-color: transparent;
@@ -61,28 +47,7 @@
     -fx-background-color: #E8E5DA;
 }
 
-#mainWindSpeedLow{
-    -fx-font-family: "Century Gothic Bold", sans-serif;
-    -fx-font-size: 15px;
-    -fx-background-color: transparent;
-    -fx-text-fill: #CDC392;
-}
-
-#mainWindSpeedHigh{
-    -fx-font-family: "Century Gothic Bold", sans-serif;
-    -fx-font-size: 15px;
-    -fx-background-color: transparent;
-    -fx-text-fill: #CDC392;
-}
-
-#basicTO{
-    -fx-font-family: "Century Gothic Bold", sans-serif;
-    -fx-font-size: 15px;
-    -fx-background-color: transparent;
-    -fx-text-fill: #CDC392;
-}
-
-#basicMPH{
+#mainWindSpeedLow, #mainWindSpeedHigh, #basicTO, #basicMPH{
     -fx-font-family: "Century Gothic Bold", sans-serif;
     -fx-font-size: 15px;
     -fx-background-color: transparent;
@@ -105,23 +70,7 @@
     -fx-text-fill: #E8E5DA;
 }
 
-#alertsButton{
-    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
-    -fx-font-size: 24px;
-    -fx-background-color: #9EB7E5;
-    -fx-background-radius: 45;
-    -fx-text-fill: white;
-}
-
-#favoritesButton{
-    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
-    -fx-font-size: 24px;
-    -fx-background-color: #9EB7E5;
-    -fx-background-radius: 45;
-    -fx-text-fill: white;
-}
-
-#currLocat{
+#alertsButton, #favoritesButton, #currLocat{
     -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
     -fx-font-size: 24px;
     -fx-background-color: #9EB7E5;
