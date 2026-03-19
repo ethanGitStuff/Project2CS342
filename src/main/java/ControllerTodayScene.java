@@ -75,6 +75,7 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
         }
     }
 
+    // Just here for the interface, this line should never actually print to console.
     @Override
     public void onHomeClick() { System.out.println("Already at home!"); }
 

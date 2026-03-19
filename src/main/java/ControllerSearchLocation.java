@@ -54,7 +54,7 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
 	}
 
     @Override
-    public void onMenuClick() { FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/proj2SB.fxml"));
+    public void onMenuClick() { FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/multidayScene.fxml"));
         try {
             Parent rootMultiDay = loader.load();
             rootSearch.getScene().setRoot(rootMultiDay);
@@ -77,6 +77,7 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
         }
     }
 
+    // Just here for the interface, this line should never actually print to console.
     @Override
     public void onSearchClick() { System.out.println("Already on Search!"); }
 

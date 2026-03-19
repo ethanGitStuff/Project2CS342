@@ -171,6 +171,7 @@ public class ControllerMultiDay implements Initializable, MenuActionHandler {
     }
 
 
+    // Just here for the interface, this line should never actually print to console.
     @Override
     public void onMenuClick() { System.out.println("Already on Multi-day forecast!"); }
 
