@@ -1,4 +1,6 @@
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -19,6 +21,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.util.Pair;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import weather.Period;
+import weather.WeatherAPI;
 
 public class ControllerSearchLocation implements Initializable, MenuActionHandler {
 	// FXML elements
@@ -26,7 +30,9 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
     @FXML private MenuComponent bottomMenu;
     @FXML private TextField searchBar;
     @FXML private ListView<String> listBox;
-    @FXML private Button searchButton;
+    @FXML private Button selectButton;
+
+    public static String selectCity;
 
     /*
      * Search action event handler
@@ -44,11 +50,36 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
     @FXML
     private void collectResult(MouseEvent e){
         // get object selected in listview for each selection
-        String result = listBox.getSelectionModel().getSelectedItem();
-        
+        selectCity = listBox.getSelectionModel().getSelectedItem();
     }
 
-    // variables for control - could this be a map instead?
+    @FXML
+    private void onSelectedClick() {
+        if (selectCity == null) {
+            return;
+        }
+
+        int index = currentCities.indexOf(selectCity);
+        Pair<Float, Float> cityCoord = coordinates.get(index);
+
+        BigDecimal bd1 = new BigDecimal(cityCoord.getKey()).setScale(4, RoundingMode.DOWN);
+        float currLat = bd1.floatValue();
+
+        BigDecimal bd2 = new BigDecimal(cityCoord.getValue()).setScale(4, RoundingMode.DOWN);
+        float currLon = bd2.floatValue();
+
+
+        ArrayList<String> details = MyWeatherAPI.getRegion(currLat, currLon);
+        System.out.println(details);
+        ArrayList<Period> newForecast = WeatherAPI.getForecast(
+                details.get(0), Integer.parseInt(details.get(1)), Integer.parseInt(details.get(2)));
+
+        JavaFX.forecast = newForecast;
+        JavaFX.setForecastOfDays();
+        ControllerTodayScene.currentLocation = selectCity;
+        onHomeClick();
+    }
+
     static private ArrayList<String> currentCities;
     static private ArrayList<Pair<Float, Float>> coordinates;
 

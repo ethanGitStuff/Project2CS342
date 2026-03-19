@@ -1,5 +1,7 @@
 import com.custom.classes.City;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -95,8 +97,11 @@ public class ControllerFavorites implements Initializable, MenuActionHandler {
                 return;
             }
         }
+        BigDecimal bd1 = new BigDecimal(lat).setScale(4, RoundingMode.DOWN);
+        BigDecimal bd2 = new BigDecimal(lon).setScale(4, RoundingMode.DOWN);
 
-        City toAddCity = new City(cityNameField.getText(), lat, lon);
+
+        City toAddCity = new City(cityNameField.getText(), bd1.floatValue(), bd2.floatValue());
         String toAddString = cityNameField.getText() + " | " + latField.getText() + " | " + longField.getText();
 
         JavaFX.favorites.add(toAddCity);
