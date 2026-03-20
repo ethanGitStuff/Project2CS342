@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.custom.components.MenuComponent?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+
+<Pane fx:id="rootSearch" maxHeight="750.0" maxWidth="400.0" minHeight="750.0" minWidth="400.0" prefHeight="750.0" prefWidth="400.0" stylesheets="@../Other/locationStyles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerSearchLocation">
+   <children>
+      <MenuComponent fx:id="bottomMenu" searchOn="false" />
+      <ImageView fitHeight="288.0" fitWidth="297.0" layoutX="56.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/globe.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="searchBar" layoutX="16.0" layoutY="151.0" prefHeight="65.0" prefWidth="369.0" promptText="Search location for weather here...">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" offsetX="2.0" offsetY="3.0">
+               <color>
+                  <Color opacity="0.75" />
+               </color></DropShadow>
+         </effect>
+      </TextField>
+      <ListView fx:id="listBox" layoutX="25.0" layoutY="330.0" onMouseClicked="#collectResult" prefHeight="240.0" prefWidth="350.0">
+         <effect>
+            <DropShadow offsetX="2.0" offsetY="3.0">
+               <color>
+                  <Color opacity="0.75" />
+               </color>
+            </DropShadow>
+         </effect></ListView>
+      <Button fx:id="searchButton" layoutX="318.0" layoutY="158.0" mnemonicParsing="false" onAction="#search" prefHeight="50.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/returnKey.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Pane fx:id="popUp" disable="true" layoutX="25.0" layoutY="580.0" prefHeight="80.0" prefWidth="350.0" visible="false">
+         <children>
+            <Button fx:id="selectButton" layoutX="40.0" layoutY="20.0" mnemonicParsing="false" onAction="#onSelectedClick" style="-fx-background-color: #9EB7E5;" text="Select" />
+            <Button fx:id="favButton" layoutX="239.0" layoutY="20.0" mnemonicParsing="false" onAction="#onFavClick" style="-fx-background-color: #9EB7E5;" text="Favorite" />
+            <TextField fx:id="couldNotFav" alignment="CENTER" editable="false" layoutX="96.0" layoutY="22.0" text="Could Not Favorite" visible="false" />
+         </children>
+      </Pane>
+   </children>
+   <padding>
+      <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+   </padding>
+</Pane>
