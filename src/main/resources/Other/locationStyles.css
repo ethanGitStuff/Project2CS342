@@ -21,3 +21,25 @@
 #searchButton{
     -fx-background-color: transparent;
 }
+
+#popUp{
+    -fx-background-color: #648de5;
+    -fx-background-radius: 20;
+}
+
+#selectButton{
+    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
+    -fx-font-size: 14px;
+}
+
+#favButton{
+    -fx-font-family: "Iosevka Charon Mono Medium", "Century Gothic", sans-serif;
+    -fx-font-size: 14px;
+}
+
+#couldNotFav{
+    -fx-font-family: "Iosevka Charon Mono Bold", "Century Gothic", sans-serif;
+    -fx-font-size: 12px;
+    -fx-text-fill: darkred;
+    -fx-background-color: transparent;
+}

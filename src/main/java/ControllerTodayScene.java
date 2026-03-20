@@ -10,7 +10,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-import javafx.scene.control.Button;
 import javafx.scene.Parent;
 
 
@@ -25,7 +24,6 @@ public class ControllerTodayScene implements Initializable, MenuActionHandler {
     @FXML private TextField mainPrecip;
     @FXML private TextField basicTO;
     @FXML private TextField basicMPH;
-    @FXML private Button favoritesButton;
     @FXML private TextField currLocat;
     @FXML private MenuComponent bottomMenu;
 

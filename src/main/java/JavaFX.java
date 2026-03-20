@@ -2,12 +2,15 @@ import com.custom.classes.City;
 import com.custom.classes.Day;
 import com.custom.classes.DayPair;
 import com.fasterxml.jackson.core.type.TypeReference;
+import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import weather.Period;
 import weather.WeatherAPI;
 
@@ -99,5 +102,12 @@ public class JavaFX extends Application {
 		} catch(Exception e){
 			e.printStackTrace();
 		}
+	}
+
+	public static void badText(TextField bad) {
+		bad.setVisible(true);
+		PauseTransition pause = new PauseTransition(Duration.seconds(2));
+		pause.setOnFinished(x -> bad.setVisible(false));
+		pause.play();
 	}
 }

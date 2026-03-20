@@ -8,7 +8,6 @@ import java.util.ResourceBundle;
 
 import com.custom.components.MenuActionHandler;
 import com.custom.components.MenuComponent;
-import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,9 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-import javafx.scene.control.Button;
 import javafx.scene.Parent;
-import javafx.util.Duration;
 import weather.Period;
 import weather.WeatherAPI;
 
@@ -36,10 +33,6 @@ public class ControllerFavorites implements Initializable, MenuActionHandler {
     @FXML private TextField badInput;
 
     @FXML private ListView<String> favListView;
-
-    @FXML private Button addButton;
-    @FXML private Button selectButton;
-    @FXML private Button deleteButton;
 
     private City currentCity;
 
@@ -66,16 +59,16 @@ public class ControllerFavorites implements Initializable, MenuActionHandler {
 
         if (favListView.getItems().size() >= 14) {
             badInput.setText("Too Many");
-            badText(badInput);
+            JavaFX.badText(badInput);
             badInput.setText("Not a valid input");
             return;
         }
         if (cityNameField.getText().isEmpty() || latField.getText().isEmpty() || longField.getText().isEmpty()) {
-            badText(badInput);
+            JavaFX.badText(badInput);
             return;
         }
         if (cityNameField.getText().contains("|")) {
-            badText(badInput);
+            JavaFX.badText(badInput);
             return;
         }
         try {
@@ -83,17 +76,17 @@ public class ControllerFavorites implements Initializable, MenuActionHandler {
             lon = Float.parseFloat(longField.getText());
         }
         catch (NumberFormatException n) {
-            badText(badInput);
+            JavaFX.badText(badInput);
             return;
         }
 
         for (City c : JavaFX.favorites) {
             if (cityNameField.getText().equals(c.city)) {
-                badText(badInput);
+                JavaFX.badText(badInput);
                 return;
             }
             if (lat == c.latitude && lon == c.longitude) {
-                badText(badInput);
+                JavaFX.badText(badInput);
                 return;
             }
         }
@@ -142,14 +135,14 @@ public class ControllerFavorites implements Initializable, MenuActionHandler {
     public void onSelectButtonClick(ActionEvent e) {
         ArrayList<String> cityDetails = MyWeatherAPI.getRegion(currentCity.latitude, currentCity.longitude);
         if (cityDetails.get(0).isEmpty()) {
-            badText(badLocation);
+            JavaFX.badText(badLocation);
             return;
         }
 
         ArrayList<Period> newForecast = WeatherAPI.getForecast(
                 cityDetails.get(0), Integer.parseInt(cityDetails.get(1)), Integer.parseInt(cityDetails.get(2)));
         if (newForecast == null) {
-            badText(badLocation);
+            JavaFX.badText(badLocation);
             return;
         }
 
@@ -157,13 +150,6 @@ public class ControllerFavorites implements Initializable, MenuActionHandler {
         JavaFX.setForecastOfDays();
         ControllerTodayScene.currentLocation = currentCity.city;
         onHomeClick();
-    }
-
-    private void badText(TextField bad) {
-        bad.setVisible(true);
-        PauseTransition pause = new PauseTransition(Duration.seconds(2));
-        pause.setOnFinished(x -> bad.setVisible(false));
-        pause.play();
     }
 
     @Override
