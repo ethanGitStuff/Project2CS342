@@ -80,6 +80,9 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
     }
 
     public void onFavClick() {
+        couldNotFav.setStyle("-fx-font-family: \"Iosevka Charon Mono Bold\", \"Century Gothic\", sans-serif; -fx-font-size: 12px; -fx-text-fill: darkred;-fx-background-color: transparent;");
+        couldNotFav.setText("Could Not Favorite");
+
         if (selectCity == null) {
             return;
         }
@@ -93,6 +96,7 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
                 return;
             }
         }
+        couldNotFav.setText("Added");
         int index = currentCities.indexOf(selectCity);
         Pair<Float, Float> cityCoord = coordinates.get(index);
 
@@ -101,6 +105,9 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
         City toAddCity = new City(selectCity, bd1.floatValue(), bd2.floatValue());
 
         JavaFX.favorites.add(toAddCity);
+
+        couldNotFav.setStyle("-fx-font-family: \"Iosevka Charon Mono Bold\", \"Century Gothic\", sans-serif; -fx-font-size: 12px; -fx-text-fill: black;-fx-background-color: transparent;");
+        JavaFX.badText(couldNotFav);
     }
 	
 	@Override
