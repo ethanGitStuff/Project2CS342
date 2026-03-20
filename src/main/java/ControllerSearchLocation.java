@@ -83,6 +83,10 @@ public class ControllerSearchLocation implements Initializable, MenuActionHandle
         if (selectCity == null) {
             return;
         }
+        if (JavaFX.favorites.size() >= 14) {
+            JavaFX.badText(couldNotFav);
+            return;
+        }
         for (City c : JavaFX.favorites) {
             if (c.city.equals(selectCity)) {
                 JavaFX.badText(couldNotFav);
