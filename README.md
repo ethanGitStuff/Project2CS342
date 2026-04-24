@@ -15,3 +15,5 @@ by the user if they no longer need that location favorited.
 
 We created a custom JavaFX component to comprise the bottom menu, since it was going to be displayed on every scene we figured
 creating a new object that behaved the same would be beneficial, but getting it to work in scenebuilder was quite the headache. 
+
+*Link to demo: https://youtu.be/fRy3GJdQnSo*
