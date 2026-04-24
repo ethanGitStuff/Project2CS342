@@ -1,5 +1,6 @@
 # JavaFX Weather App for Software Design
 *Starter code provided by CS342 UIC in Spring of 2026*
+
 *Project finished by Ethan and Hasfah*
 
 This app was created for the purpose of providing the Weather forecast using the National Weather Service API.
